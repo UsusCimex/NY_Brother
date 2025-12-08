@@ -48,7 +48,7 @@
         .emoji-rain { position: fixed; font-size: 2rem; animation: fall 3s linear forwards; z-index: 100; }
         @keyframes fall { 0% { transform: translateY(-100px) rotate(0deg); opacity: 1; } 100% { transform: translateY(100vh) rotate(720deg); opacity: 0; } }
         .hidden { display: none !important; }
-        .hint { color: #888; font-size: 1.1rem; font-style: italic; margin-top: 10px; }
+        .hint { color: #555; font-size: 0.9rem; font-style: italic; margin-top: 10px; }
         .meme-text { font-size: 1.8rem; text-transform: uppercase; letter-spacing: 3px; }
         .cipher-text { font-family: 'Press Start 2P', cursive; font-size: 1.1rem; color: #00ffff; background: #000; padding: 15px; margin: 15px 0; border: 2px solid #00ffff; letter-spacing: 3px; }
         .binary-text { font-family: 'VT323', monospace; font-size: 1.5rem; color: #00ff00; background: #000; padding: 15px; margin: 15px 0; border: 2px solid #00ff00; letter-spacing: 2px; }
@@ -75,23 +75,18 @@
         @keyframes screen-shake { 0%, 100% { transform: translate(0); } 10% { transform: translate(-10px, -10px); } 20% { transform: translate(10px, 10px); } 30% { transform: translate(-10px, 10px); } 40% { transform: translate(10px, -10px); } 50% { transform: translate(-10px, 0); } 60% { transform: translate(10px, 0); } }
         .final-virus { animation: final-virus 0.5s forwards; }
         @keyframes final-virus { 0% { transform: scale(1); } 50% { transform: scale(4) rotate(180deg); } 100% { transform: scale(0) rotate(360deg); opacity: 0; } }
-        .skill-issue { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Press Start 2P', cursive; font-size: 1.2rem; color: #ff0000; text-shadow: 0 0 30px #ff0000; z-index: 9999; animation: skill-issue-anim 0.5s ease-out; background: rgba(0,0,0,0.95); padding: 30px; border: 4px solid #ff0000; text-align: center; }
-        @keyframes skill-issue-anim { 0% { transform: translate(-50%, -50%) scale(0); } 50% { transform: translate(-50%, -50%) scale(1.2); } 100% { transform: translate(-50%, -50%) scale(1); } }
         .combo-text { position: fixed; font-family: 'Press Start 2P', cursive; font-size: 0.8rem; color: #ffff00; text-shadow: 0 0 10px #ffff00; animation: combo-float 0.8s ease-out forwards; z-index: 100; pointer-events: none; }
         @keyframes combo-float { 0% { opacity: 1; transform: translateY(0) scale(1); } 100% { opacity: 0; transform: translateY(-60px) scale(1.5); } }
         .progress-bar { width: 100%; height: 20px; background: #111; border: 2px solid #00ff00; margin: 10px 0; overflow: hidden; }
         .progress-fill { height: 100%; background: linear-gradient(90deg, #ff0000, #ff7700, #ffff00, #00ff00); width: 0%; transition: width 0.2s; }
-        .emotional-damage { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2.5rem; z-index: 9999; animation: emotional-damage 1.5s ease-out forwards; text-align: center; background: rgba(0,0,0,0.9); padding: 25px; border: 3px solid #ff0000; font-family: 'Press Start 2P', cursive; color: #ff0000; }
+        .emotional-damage { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2.5rem; z-index: 9999; animation: emotional-damage 1.5s ease-out forwards; text-align: center; background: rgba(0,0,0,0.95); padding: 25px; border: 3px solid #ff0000; font-family: 'Press Start 2P', cursive; color: #ff0000; }
         @keyframes emotional-damage { 0% { opacity: 0; transform: translate(-50%, -50%) scale(0) rotate(-20deg); } 30% { opacity: 1; transform: translate(-50%, -50%) scale(1.3) rotate(10deg); } 100% { opacity: 0; transform: translate(-50%, -50%) scale(2); } }
         .fanum-tax { color: #ff00ff; animation: fanum 0.5s infinite; display: inline-block; }
         @keyframes fanum { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(3px); } }
         .speedrun-timer { position: fixed; top: 10px; right: 10px; font-family: 'Press Start 2P', cursive; font-size: 0.6rem; color: #00ff00; background: rgba(0,0,0,0.9); padding: 8px; border: 1px solid #00ff00; z-index: 1001; }
         .kek { color: #ff69b4; font-size: 2rem; text-shadow: 0 0 15px #ff69b4; }
         .cheburek { background: linear-gradient(45deg, #8B4513, #D2691E, #F4A460); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-size: 2rem; }
-        .wave-indicator { font-family: 'Press Start 2P', cursive; font-size: 1.5rem; color: #ff00ff; text-align: center; animation: wave-pulse 0.5s infinite; }
-        @keyframes wave-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
 
-        /* НОВЫЕ СТИЛИ ДЛЯ МИНИ-ИГР */
         .reaction-btn {
             width: 200px; height: 200px; border-radius: 50%; font-size: 1.5rem;
             font-family: 'Press Start 2P', cursive; cursor: pointer; border: 5px solid #000;
@@ -125,7 +120,16 @@
         .memory-btn.btn-purple { color: #ff00ff; }
 
         .baobab { color: #8B4513; font-size: 2rem; text-shadow: 0 0 10px #8B4513; }
-        .kuplinov { color: #ff69b4; font-size: 2rem; text-shadow: 0 0 10px #ff69b4; }
+        .sus { color: #ff0000; font-size: 2rem; text-shadow: 0 0 10px #ff0000; animation: sus-pulse 0.5s infinite; }
+        @keyframes sus-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+
+        .thicc-ascii { color: #ff69b4; font-size: 0.7rem; line-height: 1.1; }
+        .dong-ascii { color: #ff69b4; font-size: 0.8rem; line-height: 1; }
+        .booba-ascii { color: #ffaa00; font-size: 0.6rem; line-height: 1; }
+
+        .oof { color: #ff4444; animation: oof-shake 0.1s infinite; }
+        @keyframes oof-shake { 0%, 100% { transform: translateX(-2px) rotate(-1deg); } 50% { transform: translateX(2px) rotate(1deg); } }
+
     </style>
 </head>
 <body>
@@ -133,19 +137,21 @@
         СПИДРАН: <span id="speedrunTime">00:00</span>
     </div>
 
+
     <div class="container">
         <div class="header">
             <h1>🎄 БАТЯ_ХАК v6.9.420 🎄</h1>
-            <div class="ascii-art">
-        *
-       /|\
-      /*|O\
-     /*/|\*\
-    /X/O|*\X\
-   /*/X/|\X\*\
-  /O/*/X|*\O\X\
- /*/O/X/|\X\O\*\
-    |___|
+            <div class="ascii-art dong-ascii">
+⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⣦⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀
+⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀
+⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠈⠙⠛⠛⠛⠋⠁⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠘⠛⠛⠛⠛⠛⠛⠃⠀⠀⠀⠀⠀⠀
             </div>
         </div>
 
@@ -171,47 +177,99 @@
 
             <!-- STAGE 0: Intro -->
             <div class="stage active" id="stage0">
-                <p class="message"><span class="cringe">🐺 ТЫ ЗАШЁЛ НА ТЕРРИТОРИЮ ЛЕГЕНД!!! 🐺</span></p>
-                <p class="message">Система обнаружила <span class="epic">ЗАШИФРОВАННЫЙ ПОДАРОК</span>...</p>
-                <p class="message">Только <span class="kek">НАСТОЯЩИЙ КРАСАВЧИК</span> может пройти <span class="xmas">10 ИСПЫТАНИЙ</span>! 🔐</p>
-                <p class="message" style="font-size: 2rem;">Введи свой <span class="brainrot">ЛЕГЕНДАРНЫЙ НИК</span>:</p>
-                <p class="message hint">(Подсказка: кто тут главный батя...)</p>
-                <div class="prompt"><input type="text" id="nameInput" placeholder="Твой ник..."></div>
-                <button onclick="checkNick()">[ ВОЙТИ КАК ЛЕГЕНДА ]</button>
+                <p class="message"><span class="cringe">🐺 СЮДА ЗАХОДЯТ ТОЛЬКО ГИГАЧАДЫ!!! 🐺</span></p>
+                <div class="ascii-art thicc-ascii">
+⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣴⣶⣶⣶⣶⣦⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣰⣿⣿⣿⡿⠿⠛⠛⠛⠛⠿⢿⣿⣿⣿⣿⣷⡀⠀⠀⠀⠀
+⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀
+⠀⢀⣾⣿⣿⣿( . Y . )⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠀
+⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀
+⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀
+⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠀
+⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀
+⠀⠀⠀⠙⠿⣿⣿⣿🍑ASS🍑⣿⣿⣿⣿⣿⠿⠋⠀⠀
+⠀⠀⠀⠀⠀⠀⠉⠛⠿⠿⣿⣿⣿⣿⠿⠿⠛⠉⠀⠀⠀⠀⠀⠀⠀
+                </div>
+                <p class="message">Система обнаружила <span class="epic">СЕКСУАЛЬНЫЙ ПОДАРОК</span>...</p>
+                <p class="message">Только <span class="kek">НАСТОЯЩИЙ АЛЬФАЧ С ОГРОМНЫМ ЧСВ</span> может пройти!</p>
+                <p class="message" style="font-size: 2rem;">Введи <span class="brainrot">НИК ЛЕГЕНДЫ</span>:</p>
+                <div class="prompt"><input type="text" id="nameInput" placeholder="👑 Ник батьки..."></div>
+                <button onclick="checkNick()">[ ВОЙТИ 🍆 ]</button>
                 <p id="nameError" class="error hidden"></p>
             </div>
 
             <!-- STAGE 1: Salad cipher -->
             <div class="stage" id="stage1">
-                <p class="message"><span class="success">✅ НИК ПОДТВЕРЖДЁН</span></p>
+                <p class="message"><span class="success">✅ БАТЬКА ОДОБРЕН!</span></p>
                 <p class="message">Добро пожаловать, <span class="epic" id="playerName"></span>! 🗿</p>
-                <p class="message"><span class="cringe">УРОВЕНЬ 1: 🥗 ШИФР САЛАТА 🥗</span></p>
-                <p class="message">Расшифруй послание! Оно закодировано <span class="ohio">"ШИФРОМ САЛАТА"</span>...</p>
+                <p class="message"><span class="cringe">🥗 УРОВЕНЬ 1: ШИФР САЛАТА 🥗</span></p>
+                <div class="ascii-art dong-ascii">
+⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀
+⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠀⠀⠀
+⠀⠀⣼⣿⣿⣿⣿⠿⠛⠛⠛⠛⠻⢿⣿⣿⣿⣿⣿⣧⠀⠀
+⠀⢸⣿⣿⣿⠋🥗ЦЕЗАРЬ🥗⠙⣿⣿⣿⣿⡇⠀
+⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀
+⠀⠀⠀⠀⠉⠛⠿⠿⠿⠿⠿⠿⠿⠛⠉⠀⠀⠀⠀⠀⠀⠀
+                </div>
+                <p class="message">Зашифровано <span class="ohio">"ШИФРОМ САЛАТА"</span>...</p>
                 <div class="cipher-text">НУЛТХУ</div>
-                <p class="message hint">Погугли что за шифр... 🔍</p>
+                <p class="message hint">🔍 гугл в помощь...</p>
                 <div class="prompt"><input type="text" id="answer1" placeholder="Расшифровка..."></div>
-                <button onclick="checkAnswer(1)">[ РАСШИФРОВАТЬ ]</button>
+                <button onclick="checkAnswer(1)">[ ВЗЛОМАТЬ ]</button>
                 <p id="error1" class="error hidden"></p>
             </div>
 
             <!-- STAGE 2: ЛОЛ КЕК ЧЕБУРЕК -->
             <div class="stage" id="stage2">
-                <p class="message"><span class="success">✅ ШИФР ВЗЛОМАН!</span></p>
-                <p class="message"><span class="cringe">УРОВЕНЬ 2: ТЕСТ НА ОЛДФАГА 👴</span></p>
-                <div class="ascii-art" style="color: #ff69b4; font-size: 1.5rem;">( ͡° ͜ʖ ͡°)</div>
-                <p class="message">Закончи легендарную фразу:</p>
+                <p class="message"><span class="success">✅ КРИПТОГРАФ!</span></p>
+                <p class="message"><span class="cringe">👴 УРОВЕНЬ 2: ТЕСТ НА ОЛДФАГА 👴</span></p>
+                <div class="ascii-art booba-ascii">
+⠀⠀⠀⠀⠀⣀⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣀⠀⠀⠀⠀⠀
+⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠀⠀⠀
+⠀⠀⣸⣿( ͡° ͜ʖ ͡°)⣿( ͡° ͜ʖ ͡°)⣿⣇⠀⠀
+⠀⠀⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠀⠀
+⠀⠀⠀⠀⠙⠿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠋⠀⠀⠀⠀
+                </div>
+                <p class="message">Закончи фразу:</p>
                 <p class="message" style="font-size: 2.5rem;"><span class="cheburek">"ЛОЛ КЕК ___"</span></p>
-                <p class="message">(русскими буквами)</p>
-                <div class="prompt"><input type="text" id="answer2" placeholder="Ответ..."></div>
+                <div class="prompt"><input type="text" id="answer2" placeholder="???"></div>
                 <button onclick="checkAnswer(2)">[ ОТВЕТИТЬ ]</button>
                 <p id="error2" class="error hidden"></p>
             </div>
 
-            <!-- STAGE 3: Morse code - PISOS -->
+            <!-- STAGE 3: МИНИ-ИГРА РЕАКЦИЯ -->
             <div class="stage" id="stage3">
-                <p class="message"><span class="success">✅ ОЛДФАГ ПОДТВЕРЖДЁН! 👴</span></p>
-                <p class="message"><span class="cringe">УРОВЕНЬ 3: АЗБУКА МОРЗЕ 📡</span></p>
-                <p class="message">Дед Мороз передаёт СЕКРЕТНОЕ послание:</p>
+                <p class="message"><span class="success">✅ ОЛДФАГ!</span></p>
+                <p class="message"><span class="cringe">🎯 УРОВЕНЬ 3: РЕФЛЕКСЫ ГИГАЧАДА 🎯</span></p>
+                <div class="ascii-art dong-ascii">
+⠀⠀⠀⢀⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⡀⠀⠀⠀
+⠀⠀⣴⣿🔴ЖДИ🔴⣿⣦⠀⠀
+⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀
+⠀⠀⠹⣿🟢ЖМАКАЙ🟢⣿⠏⠀⠀
+⠀⠀⠀⠈⠛⠿⠿⠿⠿⠿⠿⠛⠁⠀⠀⠀
+                </div>
+                <p class="message">Кнопка <span class="epic">ЗЕЛЁНАЯ</span> = ЖМАКАЙ!</p>
+                <p class="message">Нужно <span class="xmas">3 УСПЕХА</span> подряд! Реакция < 300мс!</p>
+                <div class="score-display">УСПЕХОВ: <span id="reactionScore">0</span>/3 | РЕКОРД: <span id="reactionBest">---</span></div>
+                <button class="reaction-btn waiting" id="reactionBtn" onclick="handleReaction()">ЖДИ...</button>
+                <p class="reaction-result" id="reactionResult"></p>
+                <button onclick="startReaction()" id="startReactionBtn">[ ПОГНАЛИ 🚀 ]</button>
+            </div>
+
+            <!-- STAGE 4: Morse code - PISOS -->
+            <div class="stage" id="stage4">
+                <p class="message"><span class="success">✅ БЫСТРЫЙ КАК МОЛНИЯ!</span></p>
+                <p class="message"><span class="cringe">📡 УРОВЕНЬ 4: МОРЗЯНКА 📡</span></p>
+                <div class="ascii-art thicc-ascii">
+⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀
+⠀⣼⣿⣿• − − •⣿⣿⣿⣿⣧⠀
+⠀⣿⣿⣿• •⣿⣿⣿⣿⣿⣿⣿⠀
+⠀⢿⣿⣿• • •⣿⣿⣿⣿⡿⠀
+⠀⠈⠻⣿− − −⣿⣿⣿⠟⠁⠀
+⠀⠀⠀⠀• • •⠀⠀⠀⠀⠀⠀⠀
+                </div>
+                <p class="message">Дед Мороз шлёт <span class="oof">ПАЦАНСКОЕ</span> послание:</p>
                 <div class="morse-container">
                     <div class="morse-letter">•−−•</div>
                     <div class="morse-letter">••</div>
@@ -219,48 +277,103 @@
                     <div class="morse-letter">−−−</div>
                     <div class="morse-letter">•••</div>
                 </div>
-                <p class="message hint">Погугли таблицу Морзе! 🔍</p>
-                <p class="message">(5 букв латиницей)</p>
-                <div class="prompt"><input type="text" id="answer3" placeholder="5 букв..." maxlength="5" style="text-transform: uppercase;"></div>
-                <button onclick="checkAnswer(3)">[ ДЕКОДИРОВАТЬ ]</button>
-                <p id="error3" class="error hidden"></p>
+                <p class="message hint">5 латинских букв</p>
+                <div class="prompt"><input type="text" id="answer4" placeholder="?????" maxlength="10" style="text-transform: uppercase;"></div>
+                <button onclick="checkAnswer(4)">[ ДЕКОДИРОВАТЬ ]</button>
+                <p id="error4" class="error hidden"></p>
             </div>
 
-            <!-- STAGE 4: МИНИ-ИГРА РЕАКЦИЯ -->
-            <div class="stage" id="stage4">
-                <p class="message"><span class="success">✅ КЕКВ! 🐸</span></p>
-                <p class="message"><span class="cringe">УРОВЕНЬ 4: 🎯 ТЕСТ НА РЕФЛЕКСЫ 🎯</span></p>
-                <p class="message">Жди пока кнопка станет <span class="epic">ЗЕЛЁНОЙ</span> и жмакай!</p>
-                <p class="message">Нужно <span class="xmas">3 УСПЕШНЫХ</span> попытки подряд!</p>
-                <p class="message hint">Нажмёшь раньше времени = СЛИВ! 💀</p>
-                <div class="score-display">УСПЕХОВ: <span id="reactionScore">0</span>/3 | РЕКОРД: <span id="reactionBest">---</span> мс</div>
-                <button class="reaction-btn waiting" id="reactionBtn" onclick="handleReaction()">ЖДИ...</button>
-                <p class="reaction-result" id="reactionResult"></p>
-                <button onclick="startReaction()" id="startReactionBtn">[ НАЧАТЬ ТЕСТ ]</button>
-            </div>
-
-            <!-- STAGE 5: HARDCORE Virus Game -->
+            <!-- STAGE 5: БАЗА -->
             <div class="stage" id="stage5">
-                <p class="message"><span class="success">✅ РЕФЛЕКСЫ КАК У КОТА! 🐱</span></p>
-                <p class="message"><span class="cringe">УРОВЕНЬ 5: ХАРДКОР РЕЖИМ!!! 💀🔥</span></p>
-                <p class="message">В систему ворвались <span class="fanum-tax">КРИНЖ-ВИРУСЫ</span>!</p>
-                <p class="message">Уничтожь <span class="epic">20 ВИРУСОВ</span> за <span class="xmas">18 СЕКУНД</span>!</p>
-                <p class="message" style="color: #ff0000;">⚠️ ВИРУСЫ БЫСТРЫЕ И ХИТРЫЕ! ⚠️</p>
-                <div class="timer-display">⏱️ <span id="gameTimer">18.0</span></div>
-                <div class="score-display">💀 <span id="virusCount">0</span>/20 | КОМБО: <span id="comboCount">x1</span> | ВОЛНА: <span id="waveNum">1</span></div>
+                <p class="message"><span class="success">✅ КЕКВ! 🐸</span></p>
+                <p class="message"><span class="cringe">🗿 УРОВЕНЬ 5: ИНТЕРНЕТ МУДРОСТЬ 🗿</span></p>
+                <div class="ascii-art dong-ascii">
+⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠛⠛⠛⠋⠉⠈⠉⠉⠉⠉⠛⠻⢿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⡿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⢿⣿⣿⣿⣿
+⣿⣿⣿⣿⡏⣀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿⣿
+⣿⣿⣿⢏⣴⣿⣷⠀⠀⠀⠀⠀⢾⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿
+⣿⣿⣟⣾⣿⡟⠁⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣷⣤⣤⣤⣤⣤⣤⣤⣤⣿⣿
+                </div>
+                <p class="message">Когда говорят <span class="brainrot">НЕОСПОРИМУЮ ПРАВДУ</span>...</p>
+                <p class="message meme-text" style="font-size: 2rem;"><span class="brainrot">"ЭТО ___"</span></p>
+                <div class="prompt"><input type="text" id="answer5" placeholder="???"></div>
+                <button onclick="checkAnswer(5)">[ ЭТО... ]</button>
+                <p id="error5" class="error hidden"></p>
+            </div>
+
+            <!-- STAGE 6: HARDCORE Virus Game -->
+            <div class="stage" id="stage6">
+                <p class="message"><span class="success">✅ ОСНОВАНО!</span></p>
+                <p class="message"><span class="cringe">💀 УРОВЕНЬ 6: ХАРДКОР!!! 💀</span></p>
+                <div class="ascii-art thicc-ascii">
+⠀⠀⠀⠀⣠⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣄⠀⠀⠀⠀
+⠀⠀⠀⣼🦠ВИРУСЫ НАСИЛУЮТ ТВОЙ ПК🦠⣧⠀⠀⠀
+⠀⠀⠀⣿💀💀💀💀💀💀💀💀💀💀⣿⠀⠀⠀
+⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠀⠀⠀
+⠀⠀⠀⠈⠻⣿⣿УБЕЙ⣿ИХ⣿⣿⠟⠁⠀⠀⠀
+                </div>
+                <p class="message">Уничтожь <span class="epic">15 ВИРУСОВ</span> за <span class="xmas">12 СЕК</span>!</p>
+                <div class="timer-display">⏱️ <span id="gameTimer">12.0</span></div>
+                <div class="score-display">💀 <span id="virusCount">0</span>/15 | КОМБО: <span id="comboCount">x1</span> | ВОЛНА: <span id="waveNum">1</span></div>
                 <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
                 <div class="game-area" id="gameArea"></div>
-                <button onclick="startGame()" id="startGameBtn">[ НАЧАТЬ ХАРДКОР ]</button>
-                <p class="hint">Вирусы исчезают БЫСТРО! Будь готов! 😈</p>
+                <button onclick="startGame()" id="startGameBtn">[ МОЧИТЬ 🔫 ]</button>
             </div>
 
-            <!-- STAGE 6: МИНИ-ИГРА ПАМЯТЬ -->
-            <div class="stage" id="stage6">
-                <p class="message"><span class="success">✅ ВИРУСЫ УНИЧТОЖЕНЫ! 🛡️</span></p>
-                <p class="message"><span class="cringe">УРОВЕНЬ 6: 🧠 ТЕСТ НА ПАМЯТЬ 🧠</span></p>
-                <p class="message">Запомни последовательность и повтори!</p>
+            <!-- STAGE 7: ИВАН ЗОЛО - БАОБАБ -->
+            <div class="stage" id="stage7">
+                <p class="message"><span class="success">✅ ВИРУСЫ УНИЧТОЖЕНЫ!</span></p>
+                <p class="message"><span class="cringe">🎵 УРОВЕНЬ 7: ИВАН ЗОЛО 🎵</span></p>
+                <div class="ascii-art dong-ascii">
+⠀⠀⠀⠀⠀⠀⠀⠀⠀🌳⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀🌿🌳🌿⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀🌿🌳🌳🌳🌿⠀⠀⠀⠀⠀
+⠀⠀⠀⠀🌿🌳🌳🌳🌳🌳🌿⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀║║⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀║║⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀🎵ТРЕК🎵⠀⠀⠀⠀⠀
+                </div>
+                <p class="message">Легендарный <span class="epic">ИВАН ЗОЛО</span> поёт:</p>
+                <p class="message" style="font-size: 1.6rem;"><span class="baobab">"ЭТО ЖЕ БУБЛЬ ГУМ, ИЛИ ЭТО ___?"</span></p>
+                <button onclick="playBaobab()" style="background: #ff0000; margin-bottom: 15px;">🎵 ВКЛЮЧИТЬ ТРЕК 🎵</button>
+                <div class="prompt"><input type="text" id="answer7" placeholder="Это..."></div>
+                <button onclick="checkAnswer(7)">[ ОТВЕТИТЬ ]</button>
+                <p id="error7" class="error hidden"></p>
+            </div>
+
+            <!-- STAGE 8: ФИАСКО -->
+            <div class="stage" id="stage8">
+                <p class="message"><span class="success">✅ БАОБАБ ОДОБРЯЕТ!</span></p>
+                <p class="message"><span class="cringe">🐕 УРОВЕНЬ 8: ЛЕГЕНДА РУНЕТА 🐕</span></p>
+                <div class="ascii-art booba-ascii">
+⠀⠀⠀⠀⠀⢀⣤⣶⣶⣶⣶⣤⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣴⣿🐕⣿⣿🐕⣿⣦⠀⠀⠀⠀
+⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀
+⠀⠀⠀⣿⣿⣿⣿👃⣿⣿⣿⣿⣿⠀⠀⠀
+⠀⠀⠀⢿⣿⣿💧БУЛЬ💧⣿⡿⠀⠀⠀
+⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀
+⠀⠀⠀⠀🌊🌊🌊🌊🌊⠀⠀⠀⠀⠀⠀
+                </div>
+                <p class="message">Собака упала в воду...</p>
+                <p class="message" style="font-size: 1.8rem;"><span class="sus">"ЭТО ___, БРАТАН"</span></p>
+                <div class="prompt"><input type="text" id="answer8" placeholder="???"></div>
+                <button onclick="checkAnswer(8)">[ ОТВЕТИТЬ ]</button>
+                <p id="error8" class="error hidden"></p>
+            </div>
+
+            <!-- STAGE 9: МИНИ-ИГРА ПАМЯТЬ -->
+            <div class="stage" id="stage9">
+                <p class="message"><span class="success">✅ МЕМОЛОГ!</span></p>
+                <p class="message"><span class="cringe">🧠 УРОВЕНЬ 9: ТЕСТ НА ПАМЯТЬ 🧠</span></p>
+                <div class="ascii-art thicc-ascii">
+⠀⠀⠀⠀⠀⣤⣶⣶⣶⣶⣶⣶⣤⠀⠀⠀⠀⠀
+⠀⠀⠀⣠⣾🔴🔵🟡🟢🟣⣷⣄⠀⠀⠀
+⠀⠀⣴⣿⣿⣿ЗАПОМИНАЙ⣿⣿⣿⣦⠀⠀
+⠀⠀⣿⣿⣿⣿И⣿ПОВТОРЯЙ⣿⣿⠀⠀
+⠀⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠀⠀
+                </div>
                 <p class="message">Пройди <span class="epic">3 РАУНДА</span>!</p>
-                <div class="score-display">РАУНД: <span id="memoryRound">1</span>/3 | ДЛИНА: <span id="sequenceLen">4</span></div>
+                <div class="score-display">РАУНД: <span id="memoryRound">1</span>/3 | ДЛИНА: <span id="sequenceLen">5</span></div>
                 <div class="memory-grid" id="memoryGrid">
                     <button class="memory-btn btn-red" data-color="0">🔴</button>
                     <button class="memory-btn btn-blue" data-color="1">🔵</button>
@@ -269,73 +382,28 @@
                     <button class="memory-btn btn-purple" data-color="4">🟣</button>
                 </div>
                 <p class="reaction-result" id="memoryResult"></p>
-                <button onclick="startMemory()" id="startMemoryBtn">[ НАЧАТЬ ]</button>
-                <p class="hint">Смотри внимательно! 👀</p>
-            </div>
-
-            <!-- STAGE 7: БАЗА -->
-            <div class="stage" id="stage7">
-                <p class="message"><span class="success">✅ ПАМЯТЬ КАК У СЛОНА! 🐘</span></p>
-                <p class="message"><span class="cringe">УРОВЕНЬ 7: ИНТЕРНЕТ МУДРОСТЬ 🗿</span></p>
-                <div class="ascii-art" style="color: #00ff00; font-size: 0.8rem;">
-    ⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠛⠛⠛⠋⠉⠈⠉⠉⠉⠉⠛⠻⢿⣿⣿⣿⣿⣿⣿⣿
-    ⣿⣿⣿⣿⣿⡿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⢿⣿⣿⣿⣿
-    ⣿⣿⣿⣿⡏⣀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿⣿
-    ⣿⣿⣿⢏⣴⣿⣷⠀⠀⠀⠀⠀⢾⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿
-                </div>
-                <p class="message">Когда кто-то говорит неоспоримую правду...</p>
-                <p class="message meme-text" style="font-size: 2rem;">Все пишут: <span class="brainrot">"ЭТО ___"</span></p>
-                <p class="message">(русскими буквами)</p>
-                <div class="prompt"><input type="text" id="answer7" placeholder="Ответ..."></div>
-                <button onclick="checkAnswer(7)">[ ОТВЕТИТЬ ]</button>
-                <p id="error7" class="error hidden"></p>
-            </div>
-
-            <!-- STAGE 8: ИВАН ЗОЛО - БАОБАБ -->
-            <div class="stage" id="stage8">
-                <p class="message"><span class="success">✅ ОСНОВАНО! 🗿</span></p>
-                <p class="message"><span class="cringe">УРОВЕНЬ 8: 🎵 ЮТУБ ЛЕГЕНДЫ 🎵</span></p>
-                <div class="ascii-art" style="color: #8B4513; font-size: 1rem;">
-    🌳🌳🌳
-     \|/
-      |
-     /|\
-    </div>
-                <p class="message">Иван Золо поёт песню про дерево...</p>
-                <p class="message" style="font-size: 2rem;"><span class="baobab">"НА ___ СНОВА НЕТ ИНТЕРНЕТА"</span></p>
-                <p class="message">(русскими буквами, название дерева)</p>
-                <div class="prompt"><input type="text" id="answer8" placeholder="Ответ..."></div>
-                <button onclick="checkAnswer(8)">[ ОТВЕТИТЬ ]</button>
-                <p id="error8" class="error hidden"></p>
-            </div>
-
-            <!-- STAGE 9: КУПЛИНОВ -->
-            <div class="stage" id="stage9">
-                <p class="message"><span class="success">✅ БАОБАБ ОДОБРЯЕТ! 🌳</span></p>
-                <p class="message"><span class="cringe">УРОВЕНЬ 9: 🎮 ЕЩЁ ОДИН ЮТУБЕР 🎮</span></p>
-                <div class="ascii-art" style="color: #ff69b4; font-size: 1.5rem;">
-    ╔═══════════════════╗
-    ║  (◕‿◕) КУПЛИНОВ  ║
-    ╚═══════════════════╝
-                </div>
-                <p class="message">Знаменитая фраза Куплинова:</p>
-                <p class="message" style="font-size: 2rem;"><span class="kuplinov">"ОХ ЁШКИ ___"</span></p>
-                <p class="message">(русскими буквами)</p>
-                <div class="prompt"><input type="text" id="answer9" placeholder="Ответ..."></div>
-                <button onclick="checkAnswer(9)">[ ОТВЕТИТЬ ]</button>
-                <p id="error9" class="error hidden"></p>
+                <button onclick="startMemory()" id="startMemoryBtn">[ ПОЕХАЛИ 🧠 ]</button>
             </div>
 
             <!-- STAGE 10: Final binary - 69 -->
             <div class="stage" id="stage10">
-                <p class="message"><span class="success">✅ ВОРОБЫШКИ ПРИЛЕТЕЛИ! 🐦</span></p>
-                <p class="message"><span class="cringe">УРОВЕНЬ 10: ФИНАЛЬНЫЙ ВЗЛОМ 💻</span></p>
-                <p class="message">Последний рубеж! Матрица отправляет код...</p>
+                <p class="message"><span class="success">✅ ГЕНИЙ!</span></p>
+                <p class="message"><span class="cringe">💻 УРОВЕНЬ 10: ФИНАЛ!!! 💻</span></p>
+                <div class="ascii-art dong-ascii">
+⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣦⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀
+⠀⠀⠀⠀⣿⣿⠀⠀NICE⠀⠀⣿⣿⠀⠀⠀⠀
+⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀NUMBER😏⠀⠀⠀⠀⠀⠀⠀
+                </div>
+                <p class="message">Последний код от <span class="oof">МАТРИЦЫ</span>:</p>
                 <div class="binary-text" style="font-size: 2rem;">00110110 00111001</div>
-                <p class="message hint">Бинарный ASCII код. Погугли конвертер! 🔢</p>
-                <p class="message">Какие два символа?</p>
-                <div class="prompt"><input type="text" id="answer10" placeholder="Два символа..." maxlength="2"></div>
-                <button onclick="checkAnswer(10)">[ ФИНАЛЬНЫЙ ВЗЛОМ ]</button>
+                <p class="message hint">бинарный → ASCII</p>
+                <p class="message"><span class="brainrot">nice number 😏</span></p>
+                <div class="prompt"><input type="text" id="answer10" placeholder="??" maxlength="2"></div>
+                <button onclick="checkAnswer(10)">[ ФИНИШ 🏁 ]</button>
                 <p id="error10" class="error hidden"></p>
             </div>
 
@@ -349,89 +417,142 @@
 ██║  ██║██║  ██║╚██████╗██║  ██╗    ███████║╚██████╔╝╚██████╗╚██████╗███████╗███████║███████║██╗
 ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝    ╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝╚══════╝╚══════╝╚══════╝╚═╝
                 </div>
-                <p class="message"><span class="epic glitch">🎄🎉 С НОВЫМ ГОДОМ, ОЛЕГ!!! 🎉🎄</span></p>
-                <p class="message">ТЫ ОФИЦИАЛЬНО <span class="cringe">ХАКЕР-ЛЕГЕНДА 🗿💀🔥</span></p>
-                <p class="message" style="font-size: 1.4rem;"><span class="brainrot">+9999 К АУРЕ | ЭТО БАЗА | КРАСАВЧИК</span></p>
-                <p class="message">Спидран: <span class="epic" id="finalTime">00:00</span></p>
-                <div class="certificate">
-                    <p style="font-size: 1.2rem; margin-bottom: 15px;">🎁 СЕРТИФИКАТ ЛЕГЕНДЫ 🎁</p>
-                    <div class="certificate-code" id="certificateCode"></div>
-                    <p style="font-size: 1rem; color: #00ff00; margin-top: 15px;">Wildberries ждёт тебя! 🛒</p>
+                <div class="ascii-art" style="font-size: 2rem; color: #00ff00;">
+🎄🎅🎄🎅🎄🎅🎄🎅🎄
                 </div>
-                <p class="message cringe">ЛОЛ КЕК ЧЕБУРЕК! 🥟</p>
-                <p class="message" style="font-size: 1rem; color: #888;">
-                    На баобабе теперь есть интернет! 🌳<br>
-                    Ох ёшки воробышки, ты это сделал!<br>
-                    Счастливого Нового Года! 🎆
+                <p class="message"><span class="epic glitch" style="font-size: 2.2rem;">🎄 С НОВЫМ 2026 ГОДОМ, ОЛЕГА! 🎄</span></p>
+                <p class="message" style="font-size: 1.5rem; color: #00ffff;">
+                    Братан, ты прошёл квест - ты официально <span class="brainrot">ГИГАЧАД</span> 🗿
+                </p>
+                <p class="message" style="font-size: 1.3rem;">
+                    Желаю тебе в 2026:
+                </p>
+                <p class="message" style="font-size: 1.3rem; color: #ffff00; line-height: 2;">
+                    🗿 +999999 к ауре<br>
+                    🎮 Легу в бабл квасе<br>
+                    🧠 Чтобы мозг работал как у Эйнштейна<br>
+                    ❤️ Любви, тепла (без гества)
+                </p>
+                <p class="message" style="font-size: 1.2rem; margin-top: 15px;">
+                    Ты реально крут - ты <span class="epic">РЕАЛЬНЫЙ БРО</span>.<br>
+                    Горжусь тобой! 💪
+                </p>
+                <p class="message">Спидран: <span class="epic" id="finalTime">-00:01</span></p>
+                <div class="certificate">
+                    <p style="font-size: 1.4rem; margin-bottom: 15px;">🎁 ДЕРЖИ ПОДАРОК 🎁</p>
+                    <p style="font-size: 1.2rem; color: #00ffff;">Сертификат в коробке! 📦</p>
+                    <p style="font-size: 1rem; color: #00ff00; margin-top: 15px;">Wildberries ждёт! 🛒</p>
+                </div>
+                <p class="message" style="font-size: 1.5rem; color: #ff69b4; margin-top: 20px;">
+                    С любовью, твой бразе 🤝💪
                 </p>
             </div>
         </div>
     </div>
 
+    <!-- БАОБАБ АУДИО -->
+    <audio id="baobabAudio" loop>
+        <source src="https://www.myinstants.com/media/sounds/baobab.mp3" type="audio/mpeg">
+    </audio>
+
     <script>
     (function(){
         const answers = {
-            nick: ['olegbatia','oleg batia','oleg_batia','олегбатя','olegbatya','олег батя'],
+            nick: ['olegbatia','oleg batia','oleg_batia','олегбатя','olegbatya','олег батя','олегбатия'],
             1: ['крипер'],
             2: ['чебурек'],
-            3: ['pisos'],
-            7: ['база','основа'],
-            8: ['баобабе','баобаб'],
-            9: ['воробышки','воробушки'],
+            4: ['pisos','писос'],
+            5: ['база','основа'],
+            7: ['баобаб'],
+            8: ['фиаско'],
             10: ['69']
         };
 
         const errors = {
-            nick: ['🤔 КТО ТУТ БАТЯ?! 😤','❌ Кривые руки!','🚫 Нубов не пускаем!','💀 СЛИВ!','😂 Подумай ещё!'],
-            1: '❌ Гугли шифр салата! 🥗',
-            2: '❌ Классика рунета! ЛОЛ КЕК... 🤔',
-            3: '❌ Погугли азбуку Морзе!',
-            7: '❌ Когда все согласны... 🗿',
-            8: '❌ Погугли песню Ивана Золо! 🌳',
-            9: '❌ Ох ёшки... кто? 🐦',
-            10: '❌ Бинарный конвертер в помощь!'
+            nick: ['🤔 КТО ТУТ БАТЯ?!','❌ КРИНЖ!','🚫 СЛИВ!','💀 БРУХ!','😂 ОРУ!'],
+            1: '❌ ГУГЛИ!',
+            2: '❌ РИФМА!',
+            4: '❌ МОРЗЕ!',
+            5: '❌ ЭТО ЖЕ...🗿',
+            7: '❌ ПОСЛУШАЙ ТРЕК!',
+            8: '❌ СОБАКА В ВОДЕ! 🐕🌊',
+            10: '❌ БИНАРНЫЙ!'
         };
 
-        const certKey = 's4nt4h4ck2025ny';
-        const certData = [36,21,69,30,22,19,17,31,95,47,47,46,108,47,47,47,47,108,47,47];
 
         let stage = 0, nickAttempts = 0;
         let gameActive = false, virusCount = 0, combo = 1, lastKill = 0, wave = 1;
-        let gameTimer = null, timeLeft = 18;
+        let gameTimer = null, timeLeft = 12;
         let speedrunStart = null, speedrunInterval = null;
-
-        // Реакция мини-игра
-        let reactionState = 'idle'; // idle, waiting, ready, early
-        let reactionTimeout = null;
-        let reactionStartTime = 0;
-        let reactionScore = 0;
-        let reactionBest = Infinity;
-
-        // Память мини-игра
-        let memorySequence = [];
-        let memoryInput = [];
-        let memoryRound = 1;
-        let memoryPlaying = false;
-        let memoryShowingSequence = false;
-
+        let reactionState = 'idle', reactionTimeout = null, reactionStartTime = 0, reactionScore = 0, reactionBest = Infinity;
+        let memorySequence = [], memoryInput = [], memoryRound = 1, memoryPlaying = false, memoryShowingSequence = false;
         const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
         function beep(f=440,d=0.1,t='square'){
             const o=audioCtx.createOscillator(),g=audioCtx.createGain();
             o.connect(g);g.connect(audioCtx.destination);
             o.frequency.value=f;o.type=t;
-            g.gain.setValueAtTime(0.3,audioCtx.currentTime);
+            g.gain.setValueAtTime(0.4,audioCtx.currentTime);
             g.gain.exponentialRampToValueAtTime(0.01,audioCtx.currentTime+d);
             o.start();o.stop(audioCtx.currentTime+d);
         }
 
-        function playSuccess(){beep(80,0.3,'sawtooth');setTimeout(()=>beep(60,0.2,'sawtooth'),50);}
-        function playFail(){beep(150,0.1,'square');setTimeout(()=>beep(100,0.2,'square'),100);}
+        // МАКСИМАЛЬНО КРИНЖОВЫЕ ЗВУКИ
+        function playVineBoom(){
+            beep(50,0.5,'sawtooth');
+            setTimeout(()=>beep(40,0.4,'sawtooth'),100);
+            setTimeout(()=>beep(30,0.3,'sawtooth'),200);
+        }
+        function playBruh(){
+            beep(200,0.15,'square');
+            setTimeout(()=>beep(150,0.2,'square'),100);
+            setTimeout(()=>beep(100,0.3,'square'),200);
+        }
+        function playOof(){
+            beep(500,0.1,'sine');
+            setTimeout(()=>beep(250,0.2,'sine'),80);
+        }
+        function playFart(){
+            for(let i=0;i<5;i++){
+                setTimeout(()=>beep(50+Math.random()*50,0.1,'sawtooth'),i*30);
+            }
+        }
+        function playMoan(){
+            beep(300,0.3,'sine');
+            setTimeout(()=>beep(400,0.3,'sine'),150);
+            setTimeout(()=>beep(500,0.4,'sine'),300);
+        }
+        function playSuccess(){playVineBoom();setTimeout(playMoan,300);}
+        function playFail(){playBruh();setTimeout(playFart,200);}
         function playKill(){beep(800+Math.random()*400,0.05,'sine');}
-        function playCombo(){beep(600,0.1,'sine');setTimeout(()=>beep(900,0.1,'sine'),50);}
-        function playWin(){[523,659,784,1047].forEach((f,i)=>setTimeout(()=>beep(f,0.2,'sine'),i*150));}
-        function playGameOver(){beep(200,0.3,'sawtooth');setTimeout(()=>beep(100,0.5,'sawtooth'),200);}
+        function playCombo(){beep(600,0.1,'sine');setTimeout(()=>beep(900,0.1,'sine'),50);setTimeout(()=>beep(1200,0.1,'sine'),100);}
+        function playWin(){
+            playVineBoom();
+            setTimeout(()=>{[523,659,784,1047].forEach((f,i)=>setTimeout(()=>beep(f,0.3,'sine'),i*150));},200);
+            setTimeout(playMoan,800);
+        }
+        function playGameOver(){playBruh();setTimeout(()=>beep(30,0.8,'sawtooth'),200);setTimeout(playFart,500);}
         function playMemoryTone(n){beep([262,330,392,523,659][n],0.3,'sine');}
+        function playEpic(){
+            [100,200,300,400,500,600].forEach((f,i)=>setTimeout(()=>beep(f,0.15,'sawtooth'),i*40));
+        }
+
+        // Баобаб только на уровне 7
+        window.playBaobab = function(){
+            audioCtx.resume();
+            const audio = document.getElementById('baobabAudio');
+            audio.currentTime = 0;
+            audio.play().catch(()=>{
+                alert('🎵 Браузер заблокировал автовоспроизведение. Нажми кнопку ещё раз!');
+            });
+        };
+
+        // Остановить баобаб при переходе на другой уровень
+        function stopBaobab(){
+            const audio = document.getElementById('baobabAudio');
+            audio.pause();
+            audio.currentTime = 0;
+        }
 
         function startSpeedrun(){
             if(speedrunStart)return;
@@ -448,13 +569,13 @@
             return document.getElementById('speedrunTime').textContent;
         }
 
-        // Снежинки
-        for(let i=0;i<25;i++){
+        // Кринжовые снежинки
+        for(let i=0;i<30;i++){
             const s=document.createElement('div');
             s.className='snowflake';
-            s.textContent=['❄','❅','❆','✦','🗿'][Math.floor(Math.random()*5)];
+            s.textContent=['🍆','🍑','💀','🗿','😏','🐸','💦','🥵','😈'][Math.floor(Math.random()*9)];
             s.style.left=Math.random()*100+'vw';
-            s.style.animationDuration=(5+Math.random()*10)+'s';
+            s.style.animationDuration=(4+Math.random()*8)+'s';
             s.style.animationDelay=Math.random()*5+'s';
             document.body.appendChild(s);
         }
@@ -469,10 +590,12 @@
         }
 
         function goToStage(n){
+            stopBaobab(); // Остановить музыку при смене уровня
             document.querySelectorAll('.stage').forEach(s=>s.classList.remove('active'));
             document.getElementById('stage'+n).classList.add('active');
             stage=n;
             updateIndicators();
+            playEpic();
         }
 
         function shake(){
@@ -495,11 +618,12 @@
             el.className='emotional-damage';
             el.innerHTML=text;
             document.body.appendChild(el);
+            playVineBoom();
             setTimeout(()=>el.remove(),1500);
         }
 
         function rain(emojis){
-            for(let i=0;i<15;i++){
+            for(let i=0;i<25;i++){
                 setTimeout(()=>{
                     const e=document.createElement('div');
                     e.className='emoji-rain';
@@ -507,27 +631,29 @@
                     e.style.left=Math.random()*100+'vw';
                     document.body.appendChild(e);
                     setTimeout(()=>e.remove(),3500);
-                },i*60);
+                },i*40);
             }
         }
 
         window.checkNick=async function(){
+            audioCtx.resume();
             const input=document.getElementById('nameInput').value.trim().toLowerCase().replace(/\s+/g,'');
             const err=document.getElementById('nameError');
-            if(!input){err.textContent='❌ Введи ник!';err.classList.remove('hidden');return;}
+            if(!input){err.textContent='❌ ГДЕ НИК?!';err.classList.remove('hidden');playOof();return;}
 
             if(answers.nick.some(a=>a.replace(/\s+/g,'')===input)){
                 document.getElementById('playerName').textContent='ОЛЕГ БАТЯ 👑';
                 goToStage(1);
                 startSpeedrun();
-                rain(['🎄','❄️','🎅','⭐','👑','🗿']);
+                rain(['🎄','🍆','🎅','👑','🗿','💦','🍑']);
                 playSuccess();
+                showBigText('🍆 БАТЯ В ДЕЛЕ 🍆');
             }else{
                 nickAttempts++;
                 err.textContent=errors.nick[Math.min(nickAttempts-1,4)];
                 err.classList.remove('hidden');
                 shake();playFail();
-                if(nickAttempts>=3)showBigText('💀 КРИНЖ 💀');
+                if(nickAttempts>=3)showBigText('💀 ПОЗОР 💀');
             }
         };
 
@@ -537,19 +663,19 @@
 
             if(answers[s].includes(input)){
                 playSuccess();
-                showText(window.innerWidth/2,window.innerHeight/2,['ГГ!','БАЗА!','КРАСАВА!','ТОПЧИК!','ОРУ!'][Math.floor(Math.random()*5)]);
+                const texts=['ГГ!','БАЗА!','🍆','ОРУ!','НАЙС!','🗿','💦'];
+                showText(window.innerWidth/2,window.innerHeight/2,texts[Math.floor(Math.random()*texts.length)]);
 
                 if(s===10){
                     goToStage(11);
-                    document.getElementById('certificateCode').textContent=certData.map((c,i)=>String.fromCharCode(c^certKey.charCodeAt(i%certKey.length))).join('');
                     document.getElementById('finalTime').textContent=stopSpeedrun();
                     playWin();
-                    rain(['🎉','🎄','🎁','🏆','🔥','🎅','⭐','🗿','👑']);
-                    setTimeout(()=>rain(['🎉','🎆','🎄','💰']),1000);
+                    rain(['🎉','🎄','🍆','🏆','🔥','🍑','💦','😏','69']);
+                    setTimeout(()=>rain(['🎉','🎆','💰','🍆']),1000);
+                    showBigText('🏆 ГИГАЧАД 🏆');
                 }else{
-                    // Переход на следующий уровень
                     goToStage(s + 1);
-                    rain(['✅','⭐','🗿']);
+                    rain(['✅','🍆','🗿','💦']);
                 }
             }else{
                 err.textContent=errors[s];
@@ -559,7 +685,7 @@
             }
         };
 
-        // ========== МИНИ-ИГРА РЕАКЦИЯ ==========
+        // РЕАКЦИЯ
         window.startReaction = function(){
             audioCtx.resume();
             document.getElementById('startReactionBtn').classList.add('hidden');
@@ -573,13 +699,11 @@
         function startReactionRound(){
             const btn = document.getElementById('reactionBtn');
             const result = document.getElementById('reactionResult');
-
             btn.className = 'reaction-btn waiting';
             btn.textContent = 'ЖДИ...';
             result.textContent = '';
             reactionState = 'waiting';
 
-            // Случайная задержка 1.5-4 секунды
             const delay = 1500 + Math.random() * 2500;
             reactionTimeout = setTimeout(()=>{
                 if(reactionState === 'waiting'){
@@ -589,17 +713,17 @@
                     btn.textContent = 'ЖМАКАЙ!';
                     beep(800, 0.1, 'sine');
 
-                    // Таймаут на слишком медленную реакцию
                     reactionTimeout = setTimeout(()=>{
                         if(reactionState === 'ready'){
                             reactionState = 'idle';
                             btn.className = 'reaction-btn waiting';
-                            btn.textContent = 'СЛИШКОМ МЕДЛЕННО!';
-                            result.textContent = '💀 ВРЕМЯ ВЫШЛО! Начинаем заново...';
+                            btn.textContent = '🐌';
+                            result.textContent = '💀 СЛОУПОК!';
                             result.className = 'reaction-result reaction-fail';
                             reactionScore = 0;
                             document.getElementById('reactionScore').textContent = '0';
                             playFail(); shake();
+                            showBigText('🐌 МЕДЛЕННЫЙ 🐌');
                             setTimeout(startReactionRound, 2000);
                         }
                     }, 1000);
@@ -612,12 +736,11 @@
             const result = document.getElementById('reactionResult');
 
             if(reactionState === 'waiting'){
-                // Нажали слишком рано!
                 clearTimeout(reactionTimeout);
                 reactionState = 'idle';
                 btn.className = 'reaction-btn early';
                 btn.textContent = 'РАНО!';
-                result.textContent = '💀 СЛИВ! Начинаем заново...';
+                result.textContent = '💀 СЛИВ!';
                 result.className = 'reaction-result reaction-fail';
                 reactionScore = 0;
                 document.getElementById('reactionScore').textContent = '0';
@@ -626,49 +749,45 @@
                 setTimeout(startReactionRound, 2000);
             }
             else if(reactionState === 'ready'){
-                // Успех!
                 clearTimeout(reactionTimeout);
                 const reactionTime = Date.now() - reactionStartTime;
                 reactionState = 'idle';
 
                 if(reactionTime < reactionBest){
                     reactionBest = reactionTime;
-                    document.getElementById('reactionBest').textContent = reactionBest;
+                    document.getElementById('reactionBest').textContent = reactionBest + 'мс';
                 }
 
-                if(reactionTime < 350){
-                    // Быстрая реакция
+                if(reactionTime < 300){
                     reactionScore++;
                     document.getElementById('reactionScore').textContent = reactionScore;
-                    btn.textContent = reactionTime + ' мс!';
-                    result.textContent = '🔥 БЫСТРО! ' + (3-reactionScore) + ' осталось';
+                    btn.textContent = reactionTime + 'мс!';
+                    result.textContent = '🔥 ' + (3-reactionScore) + ' осталось';
                     result.className = 'reaction-result reaction-fast';
-                    beep(600, 0.1, 'sine');
-                    showText(window.innerWidth/2, window.innerHeight/2, 'БАЗА!');
+                    playCombo();
 
                     if(reactionScore >= 3){
-                        // Победа!
-                        result.textContent = '🎉 РЕФЛЕКСЫ НА ВЫСОТЕ!';
+                        result.textContent = '🎉 ГИГАЧАД!';
                         playWin();
-                        rain(['⚡','🎯','🔥']);
-                        setTimeout(()=>{ goToStage(5); rain(['✅','⭐']); }, 1500);
+                        rain(['⚡','🔥','🗿']);
+                        showBigText('⚡ МОЛНИЯ ⚡');
+                        setTimeout(()=>{ goToStage(4); }, 1500);
                     }else{
                         setTimeout(startReactionRound, 1500);
                     }
                 }else{
-                    // Медленная реакция
-                    btn.textContent = reactionTime + ' мс';
-                    result.textContent = '🐌 Слишком медленно! Нужно < 350мс';
+                    btn.textContent = reactionTime + 'мс';
+                    result.textContent = '🐌 МЕДЛЕННО!';
                     result.className = 'reaction-result reaction-slow';
                     reactionScore = 0;
                     document.getElementById('reactionScore').textContent = '0';
-                    playFail();
+                    playOof();
                     setTimeout(startReactionRound, 2000);
                 }
             }
         };
 
-        // ========== МИНИ-ИГРА ПАМЯТЬ ==========
+        // ПАМЯТЬ
         window.startMemory = function(){
             audioCtx.resume();
             document.getElementById('startMemoryBtn').classList.add('hidden');
@@ -682,19 +801,17 @@
             memoryShowingSequence = true;
             memoryInput = [];
 
-            const len = 3 + memoryRound; // 4, 5, 6
+            const len = 4 + memoryRound;
             document.getElementById('sequenceLen').textContent = len;
 
-            // Генерируем случайную последовательность
             memorySequence = [];
             for(let i = 0; i < len; i++){
                 memorySequence.push(Math.floor(Math.random() * 5));
             }
 
-            document.getElementById('memoryResult').textContent = '👀 СМОТРИ И ЗАПОМИНАЙ...';
+            document.getElementById('memoryResult').textContent = '👀 СМОТРИ...';
             document.getElementById('memoryResult').className = 'reaction-result';
 
-            // Показываем последовательность
             const btns = document.querySelectorAll('.memory-btn');
             let i = 0;
 
@@ -708,14 +825,13 @@
                     setTimeout(showNext, 600);
                 }else{
                     memoryShowingSequence = false;
-                    document.getElementById('memoryResult').textContent = '🎮 ТВОЯ ОЧЕРЕДЬ!';
+                    document.getElementById('memoryResult').textContent = '🎮 ЖМАКАЙ!';
                 }
             };
 
             setTimeout(showNext, 1000);
         }
 
-        // Клик по кнопкам памяти
         document.querySelectorAll('.memory-btn').forEach(btn=>{
             btn.addEventListener('click', function(){
                 if(!memoryPlaying || memoryShowingSequence) return;
@@ -727,13 +843,11 @@
 
                 memoryInput.push(color);
 
-                // Проверяем
                 const idx = memoryInput.length - 1;
                 if(memoryInput[idx] !== memorySequence[idx]){
-                    // Ошибка!
                     this.classList.add('wrong');
                     setTimeout(()=>this.classList.remove('wrong'), 500);
-                    document.getElementById('memoryResult').textContent = '💀 НЕПРАВИЛЬНО! Начинаем заново...';
+                    document.getElementById('memoryResult').textContent = '💀 СЛИВ!';
                     document.getElementById('memoryResult').className = 'reaction-result reaction-fail';
                     playFail(); shake();
                     showBigText('💀 СЛИВ 💀');
@@ -747,17 +861,15 @@
                 setTimeout(()=>this.classList.remove('correct'), 200);
 
                 if(memoryInput.length === memorySequence.length){
-                    // Раунд пройден!
-                    document.getElementById('memoryResult').textContent = '✅ РАУНД ' + memoryRound + ' ПРОЙДЕН!';
+                    document.getElementById('memoryResult').textContent = '✅ РАУНД ' + memoryRound;
                     document.getElementById('memoryResult').className = 'reaction-result reaction-fast';
-                    beep(600, 0.1, 'sine');
-                    showText(window.innerWidth/2, window.innerHeight/2, 'БАЗА!');
+                    playCombo();
 
                     if(memoryRound >= 3){
-                        // Победа!
                         playWin();
                         rain(['🧠','💡','🔥']);
-                        setTimeout(()=>{ goToStage(7); rain(['✅','⭐']); }, 1500);
+                        showBigText('🧠 ГЕНИЙ 🧠');
+                        setTimeout(()=>{ goToStage(10); }, 1500);
                     }else{
                         memoryRound++;
                         document.getElementById('memoryRound').textContent = memoryRound;
@@ -767,14 +879,14 @@
             });
         });
 
-        // ========== ХАРДКОР МИНИ-ИГРА ВИРУСЫ ==========
+        // ВИРУСЫ
         function resetGame(){
             gameActive=false;
-            virusCount=0;combo=1;wave=1;timeLeft=18;
+            virusCount=0;combo=1;wave=1;timeLeft=12;
             document.getElementById('virusCount').textContent='0';
             document.getElementById('comboCount').textContent='x1';
             document.getElementById('waveNum').textContent='1';
-            document.getElementById('gameTimer').textContent='18.0';
+            document.getElementById('gameTimer').textContent='12.0';
             document.getElementById('gameTimer').parentElement.classList.remove('timer-critical');
             document.getElementById('progressFill').style.width='0%';
             document.getElementById('gameArea').innerHTML='';
@@ -787,7 +899,7 @@
             gameActive=true;
             audioCtx.resume();
             document.getElementById('startGameBtn').classList.add('hidden');
-            virusCount=0;combo=1;wave=1;timeLeft=18;lastKill=Date.now();
+            virusCount=0;combo=1;wave=1;timeLeft=12;lastKill=Date.now();
 
             gameTimer=setInterval(()=>{
                 timeLeft-=0.1;
@@ -797,7 +909,7 @@
                     clearInterval(gameTimer);
                     gameActive=false;
                     document.getElementById('gameArea').innerHTML='';
-                    showBigText('💀 СЛИВ 💀<br><span style="font-size:0.8rem">КРИВЫЕ РУКИ!</span>');
+                    showBigText('💀 СЛИВ 💀');
                     playGameOver();shake();
                     setTimeout(resetGame,2000);
                 }
@@ -808,23 +920,14 @@
         };
 
         function spawnVirus(){
-            if(!gameActive||virusCount>=20)return;
-
-            if(virusCount>=20){
-                clearInterval(gameTimer);
-                gameActive=false;
-                playWin();shake();
-                showBigText('🔥 ПОБЕДА! 🔥');
-                setTimeout(()=>{goToStage(6);rain(['🦠','💀','✅','🛡️','🔥']);},1000);
-                return;
-            }
+            if(!gameActive||virusCount>=15)return;
 
             const area=document.getElementById('gameArea');
             const v=document.createElement('div');
             v.className='click-target';
 
             const size=40+Math.random()*40;
-            const emojis=['🦠','👾','💀','☠️','🤡','😈','💩','👽','🎃','🤖'];
+            const emojis=['🦠','👾','💀','🤡','😈','💩','👽','🤖','🐸','🍆','🍑'];
             v.textContent=emojis[Math.floor(Math.random()*emojis.length)];
             v.style.width=size+'px';
             v.style.height=size+'px';
@@ -848,37 +951,38 @@
                 document.getElementById('comboCount').textContent='x'+combo;
                 virusCount++;
                 document.getElementById('virusCount').textContent=virusCount;
-                document.getElementById('progressFill').style.width=(virusCount/20*100)+'%';
+                document.getElementById('progressFill').style.width=(virusCount/15*100)+'%';
 
-                if(virusCount===7){wave=2;document.getElementById('waveNum').textContent='2';}
-                if(virusCount===14){wave=3;document.getElementById('waveNum').textContent='3';}
+                if(virusCount===5){wave=2;document.getElementById('waveNum').textContent='2';}
+                if(virusCount===10){wave=3;document.getElementById('waveNum').textContent='3';}
 
                 const r=this.getBoundingClientRect();
-                const texts=['💀','🔥','БАЗА!','ОРУ!','x'+combo];
+                const texts=['💀','🔥','🍆','x'+combo,'💦','🗿'];
                 showText(r.left,r.top,texts[Math.floor(Math.random()*texts.length)]);
                 playKill();
 
-                if(virusCount>=20){
+                if(virusCount>=15){
                     this.classList.add('final-virus');
-                    shake();playSuccess();
-                    rain(['💥','🔥','💀','🎉']);
+                    shake();playVineBoom();
+                    rain(['💥','🔥','💀','🍆']);
                     clearInterval(gameTimer);
                     gameActive=false;
-                    setTimeout(()=>{goToStage(6);rain(['✅','🛡️','🗿']);},800);
+                    showBigText('🔥 ПОБЕДА 🔥');
+                    setTimeout(()=>{goToStage(7);},1000);
                 }else{
                     this.remove();
-                    const delay=wave===1?200:wave===2?120:80;
+                    const delay=wave===1?150:wave===2?80:50;
                     setTimeout(spawnVirus,delay);
-                    if(wave>=2&&Math.random()>0.5)setTimeout(spawnVirus,delay+50);
-                    if(wave>=3&&Math.random()>0.6)setTimeout(spawnVirus,delay+100);
+                    if(wave>=2&&Math.random()>0.4)setTimeout(spawnVirus,delay+30);
+                    if(wave>=3&&Math.random()>0.5)setTimeout(spawnVirus,delay+60);
                 }
             };
 
             area.appendChild(v);
 
-            const disappear=wave===1?1200:wave===2?900:700;
+            const disappear=wave===1?800:wave===2?600:400;
             setTimeout(()=>{
-                if(v.parentNode&&gameActive&&virusCount<20){
+                if(v.parentNode&&gameActive&&virusCount<15){
                     v.remove();
                     combo=1;
                     document.getElementById('comboCount').textContent='x1';
@@ -887,23 +991,40 @@
             },disappear);
         }
 
+        // Секретный чит: набери "skip" для пропуска уровня
+        let cheatBuffer = '';
         document.addEventListener('keypress',e=>{
             if(e.key==='Enter'){
                 const active=document.querySelector('.stage.active');
                 if(!active)return;
                 const id=active.id;
                 if(id==='stage0')checkNick();
-                else if(id.startsWith('stage')&&!['stage4','stage5','stage6','stage11'].includes(id)){
+                else if(id.startsWith('stage')&&!['stage3','stage6','stage9','stage11'].includes(id)){
                     const n=parseInt(id.replace('stage',''));
-                    if(n>=1&&n<=10)checkAnswer(n);
+                    if(answers[n])checkAnswer(n);
+                }
+            }
+
+            // Чит-код: набери "skip"
+            cheatBuffer += e.key.toLowerCase();
+            if(cheatBuffer.length > 10) cheatBuffer = cheatBuffer.slice(-10);
+            if(cheatBuffer.includes('skip')){
+                cheatBuffer = '';
+                const nextStage = stage + 1;
+                if(nextStage <= 11){
+                    console.log('%c🎮 ЧИТА: УРОВЕНЬ ПРОПУЩЕН!','font-size:20px;color:#ff00ff;');
+                    goToStage(nextStage);
+                    if(nextStage === 11){
+                        document.getElementById('finalTime').textContent=stopSpeedrun();
+                    }
                 }
             }
         });
 
         updateIndicators();
 
-        console.log('%c🔒 СТОЙ! ОТВЕТЫ ЗАШИФРОВАНЫ! 🔒','font-size:18px;color:#ff0000;font-weight:bold;');
-        console.log('%c🗿 Легенда проходит честно!','font-size:12px;color:#ff00ff;');
+        console.log('%c🍆 СТОЙ! НЕ ЧИТЕРЬ! 🍆','font-size:30px;color:#ff0000;font-weight:bold;');
+        console.log('%c🗿 БАТЯ СЛЕДИТ 🗿','font-size:20px;color:#ff00ff;');
     })();
     </script>
 </body>
