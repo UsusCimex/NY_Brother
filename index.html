@@ -15,7 +15,7 @@
         @keyframes snowfall { 0% { transform: translateY(0) rotate(0deg); } 100% { transform: translateY(100vh) rotate(360deg); } }
         .container { max-width: 800px; margin: 0 auto; padding: 20px; position: relative; z-index: 1; }
         .header { text-align: center; padding: 20px 0; border-bottom: 2px dashed #00ff00; margin-bottom: 30px; }
-        .header h1 { font-family: 'Press Start 2P', cursive; font-size: 1rem; text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; animation: glow 2s ease-in-out infinite alternate; }
+        .header h1 { font-family: 'Press Start 2P', cursive; font-size: 0.9rem; text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; animation: glow 2s ease-in-out infinite alternate; }
         @keyframes glow { from { text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; } to { text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 60px #00ff00; } }
         .ascii-art { font-size: 0.5rem; line-height: 1; color: #00aa00; white-space: pre; text-align: center; margin: 20px 0; }
         .terminal { background: rgba(0, 20, 0, 0.8); border: 2px solid #00ff00; border-radius: 5px; padding: 20px; margin: 20px 0; box-shadow: 0 0 20px rgba(0, 255, 0, 0.3), inset 0 0 20px rgba(0, 255, 0, 0.1); }
@@ -23,7 +23,7 @@
         .terminal-btn { width: 12px; height: 12px; border-radius: 50%; }
         .btn-red { background: #ff5f56; } .btn-yellow { background: #ffbd2e; } .btn-green { background: #27ca40; }
         .prompt { color: #00ff00; font-size: 1.4rem; }
-        .prompt::before { content: "root@santa-hack:~$ "; color: #00aa00; }
+        .prompt::before { content: "root@батя-хак:~$ "; color: #00aa00; }
         .stage { display: none; }
         .stage.active { display: block; animation: fadeIn 0.5s ease; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
@@ -33,58 +33,109 @@
         .xmas { color: #ff0000; text-shadow: 0 0 10px #ff0000; }
         .ohio { color: #ff6600; text-shadow: 0 0 10px #ff6600; animation: ohio-shake 0.5s infinite; }
         @keyframes ohio-shake { 0%, 100% { transform: rotate(-1deg); } 50% { transform: rotate(1deg); } }
-        @keyframes rainbow { 0% { color: #ff0000; text-shadow: 0 0 10px #ff0000; } 16% { color: #ff8800; text-shadow: 0 0 10px #ff8800; } 33% { color: #ffff00; text-shadow: 0 0 10px #ffff00; } 50% { color: #00ff00; text-shadow: 0 0 10px #00ff00; } 66% { color: #0088ff; text-shadow: 0 0 10px #0088ff; } 83% { color: #ff00ff; text-shadow: 0 0 10px #ff00ff; } 100% { color: #ff0000; text-shadow: 0 0 10px #ff0000; } }
+        @keyframes rainbow { 0% { color: #ff0000; } 16% { color: #ff8800; } 33% { color: #ffff00; } 50% { color: #00ff00; } 66% { color: #0088ff; } 83% { color: #ff00ff; } 100% { color: #ff0000; } }
         input[type="text"] { background: #001100; border: 2px solid #00ff00; color: #00ff00; font-family: 'VT323', monospace; font-size: 1.4rem; padding: 10px 15px; width: 100%; max-width: 300px; outline: none; margin: 10px 0; }
         input[type="text"]:focus { box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); }
-        button { background: #00ff00; color: #000; border: none; font-family: 'Press Start 2P', cursive; font-size: 0.7rem; padding: 15px 25px; cursor: pointer; margin: 10px 5px; transition: all 0.3s; }
+        button { background: #00ff00; color: #000; border: none; font-family: 'Press Start 2P', cursive; font-size: 0.6rem; padding: 15px 20px; cursor: pointer; margin: 10px 5px; transition: all 0.3s; }
         button:hover { background: #00aa00; box-shadow: 0 0 20px #00ff00; transform: scale(1.05); }
-        button:disabled { background: #333; color: #666; cursor: not-allowed; transform: none; box-shadow: none; }
         .error { color: #ff0000; font-size: 1.4rem; animation: shake 0.5s; }
         @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-10px); } 75% { transform: translateX(10px); } }
         .success { color: #00ff00; font-size: 1.4rem; }
         .certificate { background: linear-gradient(135deg, #001100 0%, #002200 50%, #001100 100%); border: 4px double #00ff00; padding: 30px; text-align: center; margin: 20px 0; position: relative; animation: pulse 2s infinite; }
         @keyframes pulse { 0%, 100% { box-shadow: 0 0 20px rgba(0, 255, 0, 0.3); } 50% { box-shadow: 0 0 40px rgba(0, 255, 0, 0.6); } }
-        .certificate::before { content: "🎄 ★ ★ ★ СЕРТИФИКАТ ★ ★ ★ 🎄"; display: block; font-family: 'Press Start 2P', cursive; font-size: 0.6rem; margin-bottom: 20px; color: #ffff00; }
-        .certificate-code { font-family: 'Press Start 2P', cursive; font-size: 1rem; color: #00ffff; background: #000; padding: 15px; margin: 15px 0; border: 2px solid #00ffff; word-break: break-all; letter-spacing: 2px; }
+        .certificate::before { content: "🎄 ★ ★ ★ СЕРТИФИКАТ ★ ★ ★ 🎄"; display: block; font-family: 'Press Start 2P', cursive; font-size: 0.5rem; margin-bottom: 20px; color: #ffff00; }
+        .certificate-code { font-family: 'Press Start 2P', cursive; font-size: 0.9rem; color: #00ffff; background: #000; padding: 15px; margin: 15px 0; border: 2px solid #00ffff; word-break: break-all; letter-spacing: 2px; }
         .emoji-rain { position: fixed; font-size: 2rem; animation: fall 3s linear forwards; z-index: 100; }
         @keyframes fall { 0% { transform: translateY(-100px) rotate(0deg); opacity: 1; } 100% { transform: translateY(100vh) rotate(720deg); opacity: 0; } }
         .hidden { display: none !important; }
         .hint { color: #888; font-size: 1.1rem; font-style: italic; margin-top: 10px; }
-        .hint-box { background: #111; border: 1px dashed #444; padding: 15px; margin: 15px 0; font-size: 1.2rem; }
         .meme-text { font-size: 1.8rem; text-transform: uppercase; letter-spacing: 3px; }
-        .cipher-text { font-family: 'Press Start 2P', cursive; font-size: 1.2rem; color: #00ffff; background: #000; padding: 15px; margin: 15px 0; border: 2px solid #00ffff; letter-spacing: 3px; word-break: break-all; }
+        .cipher-text { font-family: 'Press Start 2P', cursive; font-size: 1.1rem; color: #00ffff; background: #000; padding: 15px; margin: 15px 0; border: 2px solid #00ffff; letter-spacing: 3px; }
         .binary-text { font-family: 'VT323', monospace; font-size: 1.5rem; color: #00ff00; background: #000; padding: 15px; margin: 15px 0; border: 2px solid #00ff00; letter-spacing: 2px; }
-        .click-target { width: 60px; height: 60px; background: #ff0000; border-radius: 50%; position: absolute; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 2rem; transition: transform 0.1s; box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); }
-        .click-target:hover { transform: scale(1.1); }
-        .game-area { position: relative; width: 100%; height: 300px; background: #000; border: 2px solid #00ff00; margin: 20px 0; overflow: hidden; }
-        .score-display { font-family: 'Press Start 2P', cursive; font-size: 1rem; color: #ffff00; margin: 10px 0; }
-        .stage-indicator { text-align: center; margin-bottom: 20px; font-size: 1rem; color: #666; }
-        .stage-indicator span { display: inline-block; width: 30px; height: 30px; line-height: 30px; border-radius: 50%; background: #111; border: 2px solid #333; margin: 0 5px; }
+        .click-target { position: absolute; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: transform 0.05s; border-radius: 50%; animation: virus-float 0.3s ease-in-out infinite; }
+        @keyframes virus-float { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-5px) scale(1.05); } }
+        .click-target:hover { transform: scale(1.3) !important; filter: brightness(1.5); }
+        .game-area { position: relative; width: 100%; height: 400px; background: linear-gradient(180deg, #000 0%, #110011 50%, #001100 100%); border: 3px solid #00ff00; margin: 20px 0; overflow: hidden; }
+        .score-display { font-family: 'Press Start 2P', cursive; font-size: 0.8rem; color: #ffff00; margin: 10px 0; }
+        .timer-display { font-family: 'Press Start 2P', cursive; font-size: 1.2rem; color: #ff0000; margin: 10px 0; text-shadow: 0 0 10px #ff0000; }
+        .timer-critical { animation: timer-blink 0.2s infinite; }
+        @keyframes timer-blink { 0%, 100% { opacity: 1; color: #ff0000; } 50% { opacity: 0.5; color: #ff6600; } }
+        .stage-indicator { text-align: center; margin-bottom: 20px; font-size: 0.8rem; color: #666; display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; }
+        .stage-indicator span { display: inline-block; width: 25px; height: 25px; line-height: 25px; border-radius: 50%; background: #111; border: 2px solid #333; font-size: 0.6rem; }
         .stage-indicator span.completed { background: #00ff00; border-color: #00ff00; color: #000; }
         .stage-indicator span.current { border-color: #00ff00; color: #00ff00; animation: pulse-border 1s infinite; }
         @keyframes pulse-border { 0%, 100% { box-shadow: 0 0 5px #00ff00; } 50% { box-shadow: 0 0 15px #00ff00; } }
         .glitch { animation: glitch 0.3s infinite; }
         @keyframes glitch { 0% { transform: translate(0); } 20% { transform: translate(-2px, 2px); } 40% { transform: translate(-2px, -2px); } 60% { transform: translate(2px, 2px); } 80% { transform: translate(2px, -2px); } 100% { transform: translate(0); } }
-        .morse-container { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin: 15px 0; }
-        .morse-letter { background: #000; border: 2px solid #00ff00; padding: 10px 15px; font-size: 1.5rem; min-width: 60px; text-align: center; }
-        .sus-text { color: #ff0000; font-size: 2rem; animation: sus-pulse 0.5s infinite; }
-        @keyframes sus-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
-        .amogus { display: inline-block; animation: amogus-walk 1s infinite; }
-        @keyframes amogus-walk { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
-        .skibidi { animation: skibidi-spin 2s linear infinite; display: inline-block; }
-        @keyframes skibidi-spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .morse-container { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin: 15px 0; }
+        .morse-letter { background: #000; border: 2px solid #00ff00; padding: 8px 10px; font-size: 1.2rem; min-width: 45px; text-align: center; }
         .brainrot { background: linear-gradient(90deg, #ff0000, #ff7700, #ffff00, #00ff00, #0077ff, #ff00ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: brainrot-shift 2s linear infinite; background-size: 200% 100%; }
         @keyframes brainrot-shift { 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
         .screen-shake { animation: screen-shake 0.3s; }
-        @keyframes screen-shake { 0%, 100% { transform: translate(0); } 10% { transform: translate(-10px, -10px); } 20% { transform: translate(10px, 10px); } 30% { transform: translate(-10px, 10px); } 40% { transform: translate(10px, -10px); } 50% { transform: translate(-10px, 0); } 60% { transform: translate(10px, 0); } 70% { transform: translate(0, 10px); } 80% { transform: translate(0, -10px); } 90% { transform: translate(5px, 5px); } }
-        .final-virus { animation: final-virus 0.5s; font-size: 4rem !important; }
-        @keyframes final-virus { 0% { transform: scale(1); } 50% { transform: scale(3) rotate(180deg); } 100% { transform: scale(0) rotate(360deg); } }
+        @keyframes screen-shake { 0%, 100% { transform: translate(0); } 10% { transform: translate(-10px, -10px); } 20% { transform: translate(10px, 10px); } 30% { transform: translate(-10px, 10px); } 40% { transform: translate(10px, -10px); } 50% { transform: translate(-10px, 0); } 60% { transform: translate(10px, 0); } }
+        .final-virus { animation: final-virus 0.5s forwards; }
+        @keyframes final-virus { 0% { transform: scale(1); } 50% { transform: scale(4) rotate(180deg); } 100% { transform: scale(0) rotate(360deg); opacity: 0; } }
+        .skill-issue { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Press Start 2P', cursive; font-size: 1.2rem; color: #ff0000; text-shadow: 0 0 30px #ff0000; z-index: 9999; animation: skill-issue-anim 0.5s ease-out; background: rgba(0,0,0,0.95); padding: 30px; border: 4px solid #ff0000; text-align: center; }
+        @keyframes skill-issue-anim { 0% { transform: translate(-50%, -50%) scale(0); } 50% { transform: translate(-50%, -50%) scale(1.2); } 100% { transform: translate(-50%, -50%) scale(1); } }
+        .combo-text { position: fixed; font-family: 'Press Start 2P', cursive; font-size: 0.8rem; color: #ffff00; text-shadow: 0 0 10px #ffff00; animation: combo-float 0.8s ease-out forwards; z-index: 100; pointer-events: none; }
+        @keyframes combo-float { 0% { opacity: 1; transform: translateY(0) scale(1); } 100% { opacity: 0; transform: translateY(-60px) scale(1.5); } }
+        .progress-bar { width: 100%; height: 20px; background: #111; border: 2px solid #00ff00; margin: 10px 0; overflow: hidden; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, #ff0000, #ff7700, #ffff00, #00ff00); width: 0%; transition: width 0.2s; }
+        .emotional-damage { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2.5rem; z-index: 9999; animation: emotional-damage 1.5s ease-out forwards; text-align: center; background: rgba(0,0,0,0.9); padding: 25px; border: 3px solid #ff0000; font-family: 'Press Start 2P', cursive; color: #ff0000; }
+        @keyframes emotional-damage { 0% { opacity: 0; transform: translate(-50%, -50%) scale(0) rotate(-20deg); } 30% { opacity: 1; transform: translate(-50%, -50%) scale(1.3) rotate(10deg); } 100% { opacity: 0; transform: translate(-50%, -50%) scale(2); } }
+        .fanum-tax { color: #ff00ff; animation: fanum 0.5s infinite; display: inline-block; }
+        @keyframes fanum { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(3px); } }
+        .speedrun-timer { position: fixed; top: 10px; right: 10px; font-family: 'Press Start 2P', cursive; font-size: 0.6rem; color: #00ff00; background: rgba(0,0,0,0.9); padding: 8px; border: 1px solid #00ff00; z-index: 1001; }
+        .kek { color: #ff69b4; font-size: 2rem; text-shadow: 0 0 15px #ff69b4; }
+        .cheburek { background: linear-gradient(45deg, #8B4513, #D2691E, #F4A460); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-size: 2rem; }
+        .wave-indicator { font-family: 'Press Start 2P', cursive; font-size: 1.5rem; color: #ff00ff; text-align: center; animation: wave-pulse 0.5s infinite; }
+        @keyframes wave-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+
+        /* НОВЫЕ СТИЛИ ДЛЯ МИНИ-ИГР */
+        .reaction-btn {
+            width: 200px; height: 200px; border-radius: 50%; font-size: 1.5rem;
+            font-family: 'Press Start 2P', cursive; cursor: pointer; border: 5px solid #000;
+            transition: all 0.1s; margin: 20px auto; display: block;
+        }
+        .reaction-btn.waiting { background: #ff0000; color: #fff; }
+        .reaction-btn.ready { background: #00ff00; color: #000; animation: pulse-btn 0.3s infinite; }
+        .reaction-btn.early { background: #ff6600; color: #fff; }
+        @keyframes pulse-btn { 0%, 100% { transform: scale(1); box-shadow: 0 0 20px #00ff00; } 50% { transform: scale(1.05); box-shadow: 0 0 40px #00ff00; } }
+
+        .reaction-result { font-family: 'Press Start 2P', cursive; font-size: 1rem; text-align: center; margin: 10px 0; }
+        .reaction-fast { color: #00ff00; }
+        .reaction-slow { color: #ffff00; }
+        .reaction-fail { color: #ff0000; }
+
+        .memory-grid { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 20px 0; }
+        .memory-btn {
+            width: 80px; height: 80px; border-radius: 15px; font-size: 2.5rem;
+            cursor: pointer; border: 3px solid #333; background: #222;
+            transition: all 0.2s; display: flex; align-items: center; justify-content: center;
+        }
+        .memory-btn:hover { transform: scale(1.1); }
+        .memory-btn.flash { animation: memory-flash 0.4s; }
+        @keyframes memory-flash { 0%, 100% { transform: scale(1); filter: brightness(1); } 50% { transform: scale(1.2); filter: brightness(2); box-shadow: 0 0 30px currentColor; } }
+        .memory-btn.correct { border-color: #00ff00; box-shadow: 0 0 15px #00ff00; }
+        .memory-btn.wrong { border-color: #ff0000; animation: shake 0.3s; }
+        .memory-btn.btn-red { color: #ff0000; }
+        .memory-btn.btn-blue { color: #0088ff; }
+        .memory-btn.btn-yellow { color: #ffff00; }
+        .memory-btn.btn-green { color: #00ff00; }
+        .memory-btn.btn-purple { color: #ff00ff; }
+
+        .baobab { color: #8B4513; font-size: 2rem; text-shadow: 0 0 10px #8B4513; }
+        .kuplinov { color: #ff69b4; font-size: 2rem; text-shadow: 0 0 10px #ff69b4; }
     </style>
 </head>
 <body>
+    <div class="speedrun-timer" id="speedrunTimer">
+        СПИДРАН: <span id="speedrunTime">00:00</span>
+    </div>
+
     <div class="container">
         <div class="header">
-            <h1>🎄 SIGMA_HACK v4.20.69 🎄</h1>
+            <h1>🎄 БАТЯ_ХАК v6.9.420 🎄</h1>
             <div class="ascii-art">
         *
        /|\
@@ -94,7 +145,6 @@
    /*/X/|\X\*\
   /O/*/X|*\O\X\
  /*/O/X/|\X\O\*\
-/X/O/*/X|O\*\X\O\
     |___|
             </div>
         </div>
@@ -106,6 +156,10 @@
             <span id="ind4">4</span>
             <span id="ind5">5</span>
             <span id="ind6">6</span>
+            <span id="ind7">7</span>
+            <span id="ind8">8</span>
+            <span id="ind9">9</span>
+            <span id="ind10">10</span>
         </div>
 
         <div class="terminal">
@@ -117,128 +171,177 @@
 
             <!-- STAGE 0: Intro -->
             <div class="stage active" id="stage0">
-                <p class="message"><span class="cringe">🎅 ТЫ ЗАШЁЛ НА ТЕРРИТОРИЮ СИГМА ХАКЕРОВ!!! 🎅</span></p>
-                <p class="message">Система обнаружила <span class="epic">ЗАШИФРОВАННЫЙ ПОДАРОК</span> в секретной базе данных...</p>
-                <p class="message">Чтобы получить доступ к новогоднему сюрпризу, нужно пройти <span class="xmas">6 УРОВНЕЙ ЗАЩИТЫ</span>! 🔐</p>
-                <p class="message" style="font-size: 2rem;">Введи свой <span class="brainrot">ЛЕГЕНДАРНЫЙ НИК</span>, чтобы начать:</p>
-                <p class="message hint">(Подсказка: ты же знаешь кто тут главный...)</p>
+                <p class="message"><span class="cringe">🐺 ТЫ ЗАШЁЛ НА ТЕРРИТОРИЮ ЛЕГЕНД!!! 🐺</span></p>
+                <p class="message">Система обнаружила <span class="epic">ЗАШИФРОВАННЫЙ ПОДАРОК</span>...</p>
+                <p class="message">Только <span class="kek">НАСТОЯЩИЙ КРАСАВЧИК</span> может пройти <span class="xmas">10 ИСПЫТАНИЙ</span>! 🔐</p>
+                <p class="message" style="font-size: 2rem;">Введи свой <span class="brainrot">ЛЕГЕНДАРНЫЙ НИК</span>:</p>
+                <p class="message hint">(Подсказка: кто тут главный батя...)</p>
                 <div class="prompt"><input type="text" id="nameInput" placeholder="Твой ник..."></div>
-                <button onclick="_0xc4f2()">[ ВОЙТИ КАК СИГМА ]</button>
+                <button onclick="checkNick()">[ ВОЙТИ КАК ЛЕГЕНДА ]</button>
                 <p id="nameError" class="error hidden"></p>
             </div>
 
             <!-- STAGE 1: Salad cipher -->
             <div class="stage" id="stage1">
                 <p class="message"><span class="success">✅ НИК ПОДТВЕРЖДЁН</span></p>
-                <p class="message">Добро пожаловать, <span class="epic" id="playerName"></span>! 🔥</p>
+                <p class="message">Добро пожаловать, <span class="epic" id="playerName"></span>! 🗿</p>
                 <p class="message"><span class="cringe">УРОВЕНЬ 1: 🥗 ШИФР САЛАТА 🥗</span></p>
-                <p class="message">Перехвачено зашифрованное послание от секретного агента!</p>
-                <p class="message">Сообщение закодировано легендарным <span class="ohio">"ШИФРОМ САЛАТА"</span>...</p>
+                <p class="message">Расшифруй послание! Оно закодировано <span class="ohio">"ШИФРОМ САЛАТА"</span>...</p>
                 <div class="cipher-text">НУЛТХУ</div>
-                <p class="message hint">Гугл - твой лучший друг... или ты не настоящий хакер? 🤔</p>
-                <div class="prompt"><input type="text" id="answer1" placeholder="Расшифрованное слово..."></div>
-                <button onclick="_0xa7e3(1)">[ РАСШИФРОВАТЬ ]</button>
+                <p class="message hint">Погугли что за шифр... 🔍</p>
+                <div class="prompt"><input type="text" id="answer1" placeholder="Расшифровка..."></div>
+                <button onclick="checkAnswer(1)">[ РАСШИФРОВАТЬ ]</button>
                 <p id="error1" class="error hidden"></p>
             </div>
 
-            <!-- STAGE 2: Among Us riddle -->
+            <!-- STAGE 2: ЛОЛ КЕК ЧЕБУРЕК -->
             <div class="stage" id="stage2">
                 <p class="message"><span class="success">✅ ШИФР ВЗЛОМАН!</span></p>
-                <p class="message"><span class="cringe">ТЫ ЧЁ, РЕАЛЬНО ШАРИШЬ?! СИГМА ДЕТЕКТЕД!!! 🤯</span></p>
-                <p class="message"><span class="cringe">УРОВЕНЬ 2: ЗАГАДКА КОСМИЧЕСКИХ САМОЗВАНЦЕВ 🚀</span></p>
-                <div class="ascii-art" style="color: #ff0000; font-size: 0.6rem;">
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⣤⣤⣤⣤⣶⣦⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⡿⠛⠉⠙⠛⠛⠛⠛⠻⢿⣿⣷⣤⡀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⠋⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⠈⢻⣿⣿⡄⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⣸⣿⡏⠀⠀⠀⣠⣶⣾⣿⣿⣿⠿⠿⠿⢿⣿⣿⣿⣄⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⣿⣿⠁⠀⠀⢰⣿⣿⣯⠁⠀⠀⠀⠀⠀⠀⠀⠈⠙⢿⣷⡄⠀
-    ⠀⠀⣀⣤⣴⣶⣶⣿⡟⠀⠀⠀⢸⣿⣿⣿⣆⠀⠀⠀⠀RED⠀⠀⠀⠀⣿⣷⠀
-    ⠀⢰⣿⡟⠋⠉⣹⣿⡇⠀⠀⠀⠘⣿⣿⣿⣿⣷⣦⣤⣤⣤⣶⣶⣶⣶⣿⣿⣿⠀
-    ⠀⢸⣿⡇⠀⠀⣿⣿⡇⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠀
-    ⠀⣸⣿⡇⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠉⠻⠿⣿⣿⣿⣿⡿⠿⠿⠛⢻⣿⡇⠀⠀
-    ⠀⣿⣿⠁⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣧⠀⠀
-    ⠀⣿⣿⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⠀⠀
-    ⠀⣿⣿⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⠀⠀
-    ⠀⢿⣿⡆⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⠀
-    ⠀⠸⣿⣧⡀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠃⠀⠀
-    ⠀⠀⠛⢿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⣰⣿⣿⣷⣶⣶⣶⣶⠶⠀⢠⣿⣿⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⣿⣿⡇⠀⣽⣿⡏⠁⠀⠀⢸⣿⡇⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⣿⣿⡇⠀⢹⣿⡆⠀⠀⠀⣸⣿⠇⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⢿⣿⣦⣄⣀⣠⣴⣿⣿⠁⠀⠈⠻⣿⣿⣿⣿⡿⠏⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠈⠛⠻⠿⠿⠿⠿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                </div>
-                <p class="message meme-text"><span class="sus-text">"RED WAS EJECTED..."</span></p>
-                <p class="message">Как на языке геймеров сказать <span class="amogus">"ПОДОЗРИТЕЛЬНЫЙ"</span>? 🤨📮</p>
-                <p class="message">(три буквы, маленькими латинскими)</p>
-                <div class="prompt"><input type="text" id="answer2" placeholder="Ответ..." maxlength="3"></div>
-                <button onclick="_0xa7e3(2)">[ ОТВЕТИТЬ ]</button>
+                <p class="message"><span class="cringe">УРОВЕНЬ 2: ТЕСТ НА ОЛДФАГА 👴</span></p>
+                <div class="ascii-art" style="color: #ff69b4; font-size: 1.5rem;">( ͡° ͜ʖ ͡°)</div>
+                <p class="message">Закончи легендарную фразу:</p>
+                <p class="message" style="font-size: 2.5rem;"><span class="cheburek">"ЛОЛ КЕК ___"</span></p>
+                <p class="message">(русскими буквами)</p>
+                <div class="prompt"><input type="text" id="answer2" placeholder="Ответ..."></div>
+                <button onclick="checkAnswer(2)">[ ОТВЕТИТЬ ]</button>
                 <p id="error2" class="error hidden"></p>
             </div>
 
-            <!-- STAGE 3: Morse code -->
+            <!-- STAGE 3: Morse code - PISOS -->
             <div class="stage" id="stage3">
-                <p class="message"><span class="success">✅ 📮 САМОЗВАНЕЦ НАЙДЕН!</span></p>
-                <p class="message"><span class="cringe">УРОВЕНЬ 3: АЗБУКА МОРЗЕ ИЗ БУНКЕРА 📡</span></p>
-                <p class="message">Дед Мороз передаёт сигнал бедствия из секретного бункера!</p>
+                <p class="message"><span class="success">✅ ОЛДФАГ ПОДТВЕРЖДЁН! 👴</span></p>
+                <p class="message"><span class="cringe">УРОВЕНЬ 3: АЗБУКА МОРЗЕ 📡</span></p>
+                <p class="message">Дед Мороз передаёт СЕКРЕТНОЕ послание:</p>
                 <div class="morse-container">
+                    <div class="morse-letter">•−−•</div>
+                    <div class="morse-letter">••</div>
                     <div class="morse-letter">•••</div>
                     <div class="morse-letter">−−−</div>
                     <div class="morse-letter">•••</div>
                 </div>
-                <p class="message hint">Что это за сигнал? Погугли азбуку Морзе! 🔍</p>
-                <p class="message">(три буквы латиницей)</p>
-                <div class="prompt"><input type="text" id="answer3" placeholder="Три буквы..." maxlength="3" style="text-transform: uppercase;"></div>
-                <button onclick="_0xa7e3(3)">[ ДЕКОДИРОВАТЬ ]</button>
+                <p class="message hint">Погугли таблицу Морзе! 🔍</p>
+                <p class="message">(5 букв латиницей)</p>
+                <div class="prompt"><input type="text" id="answer3" placeholder="5 букв..." maxlength="5" style="text-transform: uppercase;"></div>
+                <button onclick="checkAnswer(3)">[ ДЕКОДИРОВАТЬ ]</button>
                 <p id="error3" class="error hidden"></p>
             </div>
 
-            <!-- STAGE 4: Virus clicker game -->
+            <!-- STAGE 4: МИНИ-ИГРА РЕАКЦИЯ -->
             <div class="stage" id="stage4">
-                <p class="message"><span class="success">✅ МОРЗЕ РАСШИФРОВАН!</span></p>
-                <p class="message"><span class="cringe">УРОВЕНЬ 4: СКИБИДИ-ВИРУСЫ АТАКУЮТ!!! 🚽💀</span></p>
-                <p class="message">О НЕТ! В систему проникли <span class="skibidi">СКИБИДИ-ВИРУСЫ</span>! Уничтожь <span class="epic">15 ШТУК</span> чтобы спасти компьютер!</p>
-                <div class="score-display">УНИЧТОЖЕНО: <span id="virusCount">0</span> / 15 🦠</div>
-                <div class="game-area" id="gameArea"></div>
-                <button onclick="_0xb8f1()" id="startGameBtn">[ ЗАПУСТИТЬ АНТИВИРУС КАСПЕРСКОГО 2007 ]</button>
-                <p class="hint">Кликай по вирусам! На последнем будет сюрприз... 😈</p>
+                <p class="message"><span class="success">✅ КЕКВ! 🐸</span></p>
+                <p class="message"><span class="cringe">УРОВЕНЬ 4: 🎯 ТЕСТ НА РЕФЛЕКСЫ 🎯</span></p>
+                <p class="message">Жди пока кнопка станет <span class="epic">ЗЕЛЁНОЙ</span> и жмакай!</p>
+                <p class="message">Нужно <span class="xmas">3 УСПЕШНЫХ</span> попытки подряд!</p>
+                <p class="message hint">Нажмёшь раньше времени = СЛИВ! 💀</p>
+                <div class="score-display">УСПЕХОВ: <span id="reactionScore">0</span>/3 | РЕКОРД: <span id="reactionBest">---</span> мс</div>
+                <button class="reaction-btn waiting" id="reactionBtn" onclick="handleReaction()">ЖДИ...</button>
+                <p class="reaction-result" id="reactionResult"></p>
+                <button onclick="startReaction()" id="startReactionBtn">[ НАЧАТЬ ТЕСТ ]</button>
             </div>
 
-            <!-- STAGE 5: Ohio riddle -->
+            <!-- STAGE 5: HARDCORE Virus Game -->
             <div class="stage" id="stage5">
-                <p class="message"><span class="success">✅ ВСЕ СКИБИДИ-ВИРУСЫ УНИЧТОЖЕНЫ!</span></p>
-                <p class="message"><span class="cringe">АНТИВИРУС КАСПЕРСКОГО 2007 ЕЩЁ МОЖЕТ!!! 😎💪</span></p>
-                <p class="message"><span class="cringe">УРОВЕНЬ 5: ТЕСТ НА BRAINROT 🧠💀</span></p>
-                <div class="ascii-art" style="color: #ff6600; font-size: 1rem;">
-   ___  _     _
-  / _ \| |__ (_) ___
- | | | | '_ \| |/ _ \
- | |_| | | | | | (_) |
-  \___/|_| |_|_|\___/
-                </div>
-                <p class="message meme-text" style="font-size: 2.2rem;"><span class="ohio">"ONLY IN OHIO..."</span></p>
-                <p class="message">Закончи фразу: <span class="brainrot">"Ohio is not ___"</span></p>
-                <p class="message">(четыре буквы, маленькими латинскими)</p>
-                <div class="prompt"><input type="text" id="answer5" placeholder="Ответ..." maxlength="4"></div>
-                <button onclick="_0xa7e3(5)">[ ОТВЕТИТЬ ]</button>
-                <p id="error5" class="error hidden"></p>
+                <p class="message"><span class="success">✅ РЕФЛЕКСЫ КАК У КОТА! 🐱</span></p>
+                <p class="message"><span class="cringe">УРОВЕНЬ 5: ХАРДКОР РЕЖИМ!!! 💀🔥</span></p>
+                <p class="message">В систему ворвались <span class="fanum-tax">КРИНЖ-ВИРУСЫ</span>!</p>
+                <p class="message">Уничтожь <span class="epic">20 ВИРУСОВ</span> за <span class="xmas">18 СЕКУНД</span>!</p>
+                <p class="message" style="color: #ff0000;">⚠️ ВИРУСЫ БЫСТРЫЕ И ХИТРЫЕ! ⚠️</p>
+                <div class="timer-display">⏱️ <span id="gameTimer">18.0</span></div>
+                <div class="score-display">💀 <span id="virusCount">0</span>/20 | КОМБО: <span id="comboCount">x1</span> | ВОЛНА: <span id="waveNum">1</span></div>
+                <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+                <div class="game-area" id="gameArea"></div>
+                <button onclick="startGame()" id="startGameBtn">[ НАЧАТЬ ХАРДКОР ]</button>
+                <p class="hint">Вирусы исчезают БЫСТРО! Будь готов! 😈</p>
             </div>
 
-            <!-- STAGE 6: Final binary -->
+            <!-- STAGE 6: МИНИ-ИГРА ПАМЯТЬ -->
             <div class="stage" id="stage6">
-                <p class="message"><span class="success">✅ BRAINROT ПОДТВЕРЖДЁН! ТЫ НАСТОЯЩИЙ ЗУМЕР! 🧠</span></p>
-                <p class="message"><span class="cringe">УРОВЕНЬ 6: ФИНАЛЬНЫЙ ВЗЛОМ - ДВОИЧНЫЙ КОД 💻</span></p>
-                <p class="message">Последний рубеж! Матрица посылает тебе сообщение...</p>
-                <div class="binary-text" style="font-size: 2rem;">01000111 01001111</div>
-                <p class="message hint">Это ASCII код. Погугли как перевести бинарный код в текст! 🔢➡️📝</p>
-                <p class="message">Какие две буквы? (латиницей, большими)</p>
-                <div class="prompt"><input type="text" id="answer6" placeholder="Две буквы..." maxlength="2" style="text-transform: uppercase;"></div>
-                <button onclick="_0xa7e3(6)">[ ФИНАЛЬНЫЙ ВЗЛОМ ]</button>
-                <p id="error6" class="error hidden"></p>
+                <p class="message"><span class="success">✅ ВИРУСЫ УНИЧТОЖЕНЫ! 🛡️</span></p>
+                <p class="message"><span class="cringe">УРОВЕНЬ 6: 🧠 ТЕСТ НА ПАМЯТЬ 🧠</span></p>
+                <p class="message">Запомни последовательность и повтори!</p>
+                <p class="message">Пройди <span class="epic">3 РАУНДА</span>!</p>
+                <div class="score-display">РАУНД: <span id="memoryRound">1</span>/3 | ДЛИНА: <span id="sequenceLen">4</span></div>
+                <div class="memory-grid" id="memoryGrid">
+                    <button class="memory-btn btn-red" data-color="0">🔴</button>
+                    <button class="memory-btn btn-blue" data-color="1">🔵</button>
+                    <button class="memory-btn btn-yellow" data-color="2">🟡</button>
+                    <button class="memory-btn btn-green" data-color="3">🟢</button>
+                    <button class="memory-btn btn-purple" data-color="4">🟣</button>
+                </div>
+                <p class="reaction-result" id="memoryResult"></p>
+                <button onclick="startMemory()" id="startMemoryBtn">[ НАЧАТЬ ]</button>
+                <p class="hint">Смотри внимательно! 👀</p>
             </div>
 
-            <!-- STAGE 7: Victory -->
+            <!-- STAGE 7: БАЗА -->
             <div class="stage" id="stage7">
-                <div class="ascii-art" style="font-size: 0.3rem; color: #ffff00;">
+                <p class="message"><span class="success">✅ ПАМЯТЬ КАК У СЛОНА! 🐘</span></p>
+                <p class="message"><span class="cringe">УРОВЕНЬ 7: ИНТЕРНЕТ МУДРОСТЬ 🗿</span></p>
+                <div class="ascii-art" style="color: #00ff00; font-size: 0.8rem;">
+    ⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠛⠛⠛⠋⠉⠈⠉⠉⠉⠉⠛⠻⢿⣿⣿⣿⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⡿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⢿⣿⣿⣿⣿
+    ⣿⣿⣿⣿⡏⣀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿⣿
+    ⣿⣿⣿⢏⣴⣿⣷⠀⠀⠀⠀⠀⢾⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿
+                </div>
+                <p class="message">Когда кто-то говорит неоспоримую правду...</p>
+                <p class="message meme-text" style="font-size: 2rem;">Все пишут: <span class="brainrot">"ЭТО ___"</span></p>
+                <p class="message">(русскими буквами)</p>
+                <div class="prompt"><input type="text" id="answer7" placeholder="Ответ..."></div>
+                <button onclick="checkAnswer(7)">[ ОТВЕТИТЬ ]</button>
+                <p id="error7" class="error hidden"></p>
+            </div>
+
+            <!-- STAGE 8: ИВАН ЗОЛО - БАОБАБ -->
+            <div class="stage" id="stage8">
+                <p class="message"><span class="success">✅ ОСНОВАНО! 🗿</span></p>
+                <p class="message"><span class="cringe">УРОВЕНЬ 8: 🎵 ЮТУБ ЛЕГЕНДЫ 🎵</span></p>
+                <div class="ascii-art" style="color: #8B4513; font-size: 1rem;">
+    🌳🌳🌳
+     \|/
+      |
+     /|\
+    </div>
+                <p class="message">Иван Золо поёт песню про дерево...</p>
+                <p class="message" style="font-size: 2rem;"><span class="baobab">"НА ___ СНОВА НЕТ ИНТЕРНЕТА"</span></p>
+                <p class="message">(русскими буквами, название дерева)</p>
+                <div class="prompt"><input type="text" id="answer8" placeholder="Ответ..."></div>
+                <button onclick="checkAnswer(8)">[ ОТВЕТИТЬ ]</button>
+                <p id="error8" class="error hidden"></p>
+            </div>
+
+            <!-- STAGE 9: КУПЛИНОВ -->
+            <div class="stage" id="stage9">
+                <p class="message"><span class="success">✅ БАОБАБ ОДОБРЯЕТ! 🌳</span></p>
+                <p class="message"><span class="cringe">УРОВЕНЬ 9: 🎮 ЕЩЁ ОДИН ЮТУБЕР 🎮</span></p>
+                <div class="ascii-art" style="color: #ff69b4; font-size: 1.5rem;">
+    ╔═══════════════════╗
+    ║  (◕‿◕) КУПЛИНОВ  ║
+    ╚═══════════════════╝
+                </div>
+                <p class="message">Знаменитая фраза Куплинова:</p>
+                <p class="message" style="font-size: 2rem;"><span class="kuplinov">"ОХ ЁШКИ ___"</span></p>
+                <p class="message">(русскими буквами)</p>
+                <div class="prompt"><input type="text" id="answer9" placeholder="Ответ..."></div>
+                <button onclick="checkAnswer(9)">[ ОТВЕТИТЬ ]</button>
+                <p id="error9" class="error hidden"></p>
+            </div>
+
+            <!-- STAGE 10: Final binary - 69 -->
+            <div class="stage" id="stage10">
+                <p class="message"><span class="success">✅ ВОРОБЫШКИ ПРИЛЕТЕЛИ! 🐦</span></p>
+                <p class="message"><span class="cringe">УРОВЕНЬ 10: ФИНАЛЬНЫЙ ВЗЛОМ 💻</span></p>
+                <p class="message">Последний рубеж! Матрица отправляет код...</p>
+                <div class="binary-text" style="font-size: 2rem;">00110110 00111001</div>
+                <p class="message hint">Бинарный ASCII код. Погугли конвертер! 🔢</p>
+                <p class="message">Какие два символа?</p>
+                <div class="prompt"><input type="text" id="answer10" placeholder="Два символа..." maxlength="2"></div>
+                <button onclick="checkAnswer(10)">[ ФИНАЛЬНЫЙ ВЗЛОМ ]</button>
+                <p id="error10" class="error hidden"></p>
+            </div>
+
+            <!-- STAGE 11: Victory -->
+            <div class="stage" id="stage11">
+                <div class="ascii-art" style="font-size: 0.25rem; color: #ffff00;">
 ██╗  ██╗ █████╗  ██████╗██╗  ██╗    ███████╗██╗   ██╗ ██████╗ ██████╗███████╗███████╗███████╗██╗
 ██║  ██║██╔══██╗██╔════╝██║ ██╔╝    ██╔════╝██║   ██║██╔════╝██╔════╝██╔════╝██╔════╝██╔════╝██║
 ███████║███████║██║     █████╔╝     ███████╗██║   ██║██║     ██║     █████╗  ███████╗███████╗██║
@@ -247,307 +350,560 @@
 ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝    ╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝╚══════╝╚══════╝╚══════╝╚═╝
                 </div>
                 <p class="message"><span class="epic glitch">🎄🎉 С НОВЫМ ГОДОМ, ОЛЕГ!!! 🎉🎄</span></p>
-                <p class="message">ТЫ ОФИЦИАЛЬНО <span class="cringe">СИГМА ХАКЕР УРОВНЯ: СКИБИДИ-ЛЕГЕНДА 🎅💀🔥</span></p>
-                <p class="message" style="font-size: 1.6rem;"><span class="brainrot">BRAINROT 100% UNLOCKED!!!</span></p>
-                <p class="message">Все 6 уровней защиты пройдены! Вот твой новогодний подарок:</p>
+                <p class="message">ТЫ ОФИЦИАЛЬНО <span class="cringe">ХАКЕР-ЛЕГЕНДА 🗿💀🔥</span></p>
+                <p class="message" style="font-size: 1.4rem;"><span class="brainrot">+9999 К АУРЕ | ЭТО БАЗА | КРАСАВЧИК</span></p>
+                <p class="message">Спидран: <span class="epic" id="finalTime">00:00</span></p>
                 <div class="certificate">
-                    <p style="font-size: 1.4rem; margin-bottom: 15px;">🎁 СИГМА СЕРТИФИКАТ 🎁</p>
+                    <p style="font-size: 1.2rem; margin-bottom: 15px;">🎁 СЕРТИФИКАТ ЛЕГЕНДЫ 🎁</p>
                     <div class="certificate-code" id="certificateCode"></div>
-                    <p style="font-size: 1.2rem; color: #00ff00; margin-top: 15px;">Wildberries ждёт тебя! 🛒</p>
+                    <p style="font-size: 1rem; color: #00ff00; margin-top: 15px;">Wildberries ждёт тебя! 🛒</p>
                 </div>
-                <p class="message cringe">Ты заслужил это, ЛЕГЕНДА! 👑🎄</p>
+                <p class="message cringe">ЛОЛ КЕК ЧЕБУРЕК! 🥟</p>
                 <p class="message" style="font-size: 1rem; color: #888;">
-                    P.S. Этот квест был создан специально для тебя 💚<br>
-                    Ты не просто прошёл квест - ты стал СИГМОЙ! 🐺<br>
+                    На баобабе теперь есть интернет! 🌳<br>
+                    Ох ёшки воробышки, ты это сделал!<br>
                     Счастливого Нового Года! 🎆
                 </p>
             </div>
         </div>
     </div>
 
-    <!-- Audio элементы для звуков -->
-    <audio id="vineBoom" preload="auto">
-        <source src="https://www.myinstants.com/media/sounds/vine-boom.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="bruhSound" preload="auto">
-        <source src="https://www.myinstants.com/media/sounds/movie_1.mp3" type="audio/mpeg">
-    </audio>
-
     <script>
     (function(){
-        // =====================================================
-        // 🔐 ВСЕ ДАННЫЕ ЗАШИФРОВАНЫ - ОТВЕТОВ В ОТКРЫТОМ ВИДЕ НЕТ
-        // =====================================================
-
-        // Правильные ответы (хешируются при загрузке)
-        const _answers = {
-            nick: 'olegbatia',
-            1: 'крипер',
-            2: 'sus',
-            3: 'sos',
-            5: 'real',
-            6: 'go'
+        const answers = {
+            nick: ['olegbatia','oleg batia','oleg_batia','олегбатя','olegbatya','олег батя'],
+            1: ['крипер'],
+            2: ['чебурек'],
+            3: ['pisos'],
+            7: ['база','основа'],
+            8: ['баобабе','баобаб'],
+            9: ['воробышки','воробушки'],
+            10: ['69']
         };
 
-        // Хранилище для хешей (заполняется при загрузке)
-        const _hashes = {
-            nick: [],
-            1: [],
-            2: [],
-            3: [],
-            5: [],
-            6: []
+        const errors = {
+            nick: ['🤔 КТО ТУТ БАТЯ?! 😤','❌ Кривые руки!','🚫 Нубов не пускаем!','💀 СЛИВ!','😂 Подумай ещё!'],
+            1: '❌ Гугли шифр салата! 🥗',
+            2: '❌ Классика рунета! ЛОЛ КЕК... 🤔',
+            3: '❌ Погугли азбуку Морзе!',
+            7: '❌ Когда все согласны... 🗿',
+            8: '❌ Погугли песню Ивана Золо! 🌳',
+            9: '❌ Ох ёшки... кто? 🐦',
+            10: '❌ Бинарный конвертер в помощь!'
         };
 
-        // Зашифрованный код сертификата (XOR с ключом)
-        const _0xk='s4nt4h4ck2025ny';
-        const _0xc=[36,21,69,30,22,19,17,31,95,47,47,46,108,47,47,47,47,108,47,47];
+        const certKey = 's4nt4h4ck2025ny';
+        const certData = [36,21,69,30,22,19,17,31,95,47,47,46,108,47,47,47,47,108,47,47];
 
-        // Сообщения об ошибках
-        const _0xe={
-            nick: [
-                '🤔 Не понял, КТО ТУТ БАТЯ?! 😤',
-                '❌ Это точно не ты... Подумай ещё раз! 🧠',
-                '🚫 Система отклоняет самозванцев! Кто РЕАЛЬНЫЙ батя?',
-                '💀 Попытка взлома обнаружена! Введи ПРАВИЛЬНЫЙ ник!',
-                '😂 Ну ты и шутник! А теперь серьёзно...'
-            ],
-            1: '❌ НЕВЕРНО! Шифр салата сложнее чем ты думал? Гугли! 🥗',
-            2: '❌ Это не то слово! Вспомни Among Us! 📮',
-            3: '❌ Неверно! Внимательно посмотри таблицу Морзе!',
-            5: '❌ НЕ ТО! Only in Ohio это бы не случилось... 🌽',
-            6: '❌ Неверно! Попробуй онлайн конвертер бинарного кода!'
-        };
+        let stage = 0, nickAttempts = 0;
+        let gameActive = false, virusCount = 0, combo = 1, lastKill = 0, wave = 1;
+        let gameTimer = null, timeLeft = 18;
+        let speedrunStart = null, speedrunInterval = null;
 
-        // SHA-256 хеширование
-        async function _0xh(s){
-            const e=new TextEncoder().encode(s);
-            const b=await crypto.subtle.digest('SHA-256',e);
-            return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('');
+        // Реакция мини-игра
+        let reactionState = 'idle'; // idle, waiting, ready, early
+        let reactionTimeout = null;
+        let reactionStartTime = 0;
+        let reactionScore = 0;
+        let reactionBest = Infinity;
+
+        // Память мини-игра
+        let memorySequence = [];
+        let memoryInput = [];
+        let memoryRound = 1;
+        let memoryPlaying = false;
+        let memoryShowingSequence = false;
+
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+        function beep(f=440,d=0.1,t='square'){
+            const o=audioCtx.createOscillator(),g=audioCtx.createGain();
+            o.connect(g);g.connect(audioCtx.destination);
+            o.frequency.value=f;o.type=t;
+            g.gain.setValueAtTime(0.3,audioCtx.currentTime);
+            g.gain.exponentialRampToValueAtTime(0.01,audioCtx.currentTime+d);
+            o.start();o.stop(audioCtx.currentTime+d);
         }
 
-        // Инициализация хешей при загрузке
-        async function initHashes(){
-            _hashes.nick.push(await _0xh(_answers.nick));
-            _hashes.nick.push(await _0xh('oleg batia'));
-            _hashes.nick.push(await _0xh('oleg_batia'));
-            _hashes.nick.push(await _0xh('олегбатя'));
-            _hashes[1].push(await _0xh(_answers[1]));
-            _hashes[2].push(await _0xh(_answers[2]));
-            _hashes[3].push(await _0xh(_answers[3]));
-            _hashes[5].push(await _0xh(_answers[5]));
-            _hashes[6].push(await _0xh(_answers[6]));
-        }
-        initHashes();
+        function playSuccess(){beep(80,0.3,'sawtooth');setTimeout(()=>beep(60,0.2,'sawtooth'),50);}
+        function playFail(){beep(150,0.1,'square');setTimeout(()=>beep(100,0.2,'square'),100);}
+        function playKill(){beep(800+Math.random()*400,0.05,'sine');}
+        function playCombo(){beep(600,0.1,'sine');setTimeout(()=>beep(900,0.1,'sine'),50);}
+        function playWin(){[523,659,784,1047].forEach((f,i)=>setTimeout(()=>beep(f,0.2,'sine'),i*150));}
+        function playGameOver(){beep(200,0.3,'sawtooth');setTimeout(()=>beep(100,0.5,'sawtooth'),200);}
+        function playMemoryTone(n){beep([262,330,392,523,659][n],0.3,'sine');}
 
-        // Расшифровка сертификата
-        function _0xd(){
-            return _0xc.map((c,i)=>String.fromCharCode(c^_0xk.charCodeAt(i%_0xk.length))).join('');
-        }
-
-        let _p='',_s=0,_v=0,_g=false,_nickAttempts=0;
-
-        // Звуковые эффекты
-        function playVineBoom(){
-            try {
-                const audio = document.getElementById('vineBoom');
-                audio.currentTime = 0;
-                audio.volume = 1.0;
-                audio.play().catch(()=>{});
-            } catch(e){}
+        function startSpeedrun(){
+            if(speedrunStart)return;
+            speedrunStart=Date.now();
+            speedrunInterval=setInterval(()=>{
+                const e=Date.now()-speedrunStart;
+                document.getElementById('speedrunTime').textContent=
+                    `${Math.floor(e/60000).toString().padStart(2,'0')}:${Math.floor((e%60000)/1000).toString().padStart(2,'0')}`;
+            },100);
         }
 
-        function playBruh(){
-            try {
-                const audio = document.getElementById('bruhSound');
-                audio.currentTime = 0;
-                audio.volume = 1.0;
-                audio.play().catch(()=>{});
-            } catch(e){}
+        function stopSpeedrun(){
+            clearInterval(speedrunInterval);
+            return document.getElementById('speedrunTime').textContent;
         }
 
-        function _0xs(){
-            const s=['❄','❅','❆','✦','✧'];
-            for(let i=0;i<30;i++){
-                const f=document.createElement('div');
-                f.className='snowflake';
-                f.textContent=s[Math.floor(Math.random()*s.length)];
-                f.style.left=Math.random()*100+'vw';
-                f.style.animationDuration=(5+Math.random()*10)+'s';
-                f.style.animationDelay=Math.random()*5+'s';
-                f.style.fontSize=(0.5+Math.random()*1)+'rem';
-                document.body.appendChild(f);
-            }
+        // Снежинки
+        for(let i=0;i<25;i++){
+            const s=document.createElement('div');
+            s.className='snowflake';
+            s.textContent=['❄','❅','❆','✦','🗿'][Math.floor(Math.random()*5)];
+            s.style.left=Math.random()*100+'vw';
+            s.style.animationDuration=(5+Math.random()*10)+'s';
+            s.style.animationDelay=Math.random()*5+'s';
+            document.body.appendChild(s);
         }
-        _0xs();
 
-        function _0xu(){
-            for(let i=1;i<=6;i++){
+        function updateIndicators(){
+            for(let i=1;i<=10;i++){
                 const ind=document.getElementById('ind'+i);
                 ind.classList.remove('completed','current');
-                if(i<_s)ind.classList.add('completed');
-                else if(i===_s)ind.classList.add('current');
+                if(i<stage)ind.classList.add('completed');
+                else if(i===stage)ind.classList.add('current');
             }
         }
 
-        function _0xst(n){
+        function goToStage(n){
             document.querySelectorAll('.stage').forEach(s=>s.classList.remove('active'));
             document.getElementById('stage'+n).classList.add('active');
-            _s=n;
-            _0xu();
+            stage=n;
+            updateIndicators();
         }
 
-        // Эффект тряски экрана
-        function shakeScreen(){
+        function shake(){
             document.body.classList.add('screen-shake');
-            setTimeout(()=>document.body.classList.remove('screen-shake'), 300);
+            setTimeout(()=>document.body.classList.remove('screen-shake'),300);
         }
 
-        // Проверка ника
-        window._0xc4f2=async function(){
-            const input=document.getElementById('nameInput').value.trim().toLowerCase().replace(/\s+/g,'');
-            const err=document.getElementById('nameError');
-            if(!input){
-                err.textContent='❌ Введи ник, легенда! Не стесняйся!';
-                err.classList.remove('hidden');
-                return;
-            }
-
-            const hash=await _0xh(input);
-            if(_hashes.nick.includes(hash)){
-                _p='OLEG БАТЯ 👑';
-                document.getElementById('playerName').textContent=_p;
-                _0xst(1);
-                _0xr(['🎄','❄️','🎅','⭐','👑','🐺']);
-                playVineBoom();
-            }else{
-                _nickAttempts++;
-                const errorMsg = _0xe.nick[Math.min(_nickAttempts-1, _0xe.nick.length-1)];
-                err.innerHTML = errorMsg;
-                err.classList.remove('hidden');
-                shakeScreen();
-                playBruh();
-            }
-        };
-
-        // Проверка ответов
-        window._0xa7e3=async function(stage){
-            const input=document.getElementById('answer'+stage).value.trim().toLowerCase();
-            const err=document.getElementById('error'+stage);
-
-            const hash=await _0xh(input);
-            const correct=_hashes[stage] && _hashes[stage].includes(hash);
-
-            if(correct){
-                playVineBoom();
-                if(stage===6){
-                    _0xst(7);
-                    document.getElementById('certificateCode').textContent=_0xd();
-                    _0xr(['🎉','🎄','🎁','🏆','💰','🛒','❤️','🔥','🎅','⭐','🐺','👑']);
-                    _0xr(['🎉','🎄','🎁','🏆','💰','🛒','❤️','🔥','🎅','⭐']);
-                    setTimeout(()=>_0xr(['🎉','🎄','🎁','🎅','⭐','🎆']),1000);
-                    setTimeout(()=>_0xr(['🐺','👑','💀','🔥']),2000);
-                }else{
-                    _0xst(stage===3?4:stage+1);
-                    _0xr(['✅','🔓','⭐','🎉','🐺']);
-                }
-            }else{
-                err.textContent=_0xe[stage];
-                err.classList.remove('hidden');
-                shakeScreen();
-                playBruh();
-                setTimeout(()=>err.classList.add('hidden'),4000);
-            }
-        };
-
-        // Игра с вирусами
-        window._0xb8f1=function(){
-            if(_g)return;
-            _g=true;
-            document.getElementById('startGameBtn').classList.add('hidden');
-            _v=0;
-            document.getElementById('virusCount').textContent='0';
-            _0xvs();
-        };
-
-        function _0xvs(){
-            if(_v>=15){
-                _g=false;
-                // Громкий звук на победу!
-                playVineBoom();
-                setTimeout(()=>{
-                    playVineBoom();
-                    _0xst(5);
-                    _0xr(['🦠','💀','✅','🛡️','🚽','🐺']);
-                },500);
-                return;
-            }
-            const area=document.getElementById('gameArea');
-            const v=document.createElement('div');
-            v.className='click-target';
-            // Скибиди-вирусы!
-            const emojis=['🚽','👾','🦠','💀','☠️','🤖','👽','🎃'];
-            v.textContent=emojis[Math.floor(Math.random()*emojis.length)];
-            const maxX=area.clientWidth-60,maxY=area.clientHeight-60;
-            v.style.left=Math.max(0,Math.random()*maxX)+'px';
-            v.style.top=Math.max(0,Math.random()*maxY)+'px';
-            v.onclick=function(){
-                _v++;
-                document.getElementById('virusCount').textContent=_v;
-
-                // Последний вирус - особенный!
-                if(_v===15){
-                    this.classList.add('final-virus');
-                    shakeScreen();
-                    playVineBoom();
-                    // Много эмодзи!
-                    _0xr(['💥','🔥','💀','☠️','🚽','🎉']);
-                    setTimeout(()=>this.remove(), 500);
-                    setTimeout(_0xvs, 600);
-                }else{
-                    this.remove();
-                    if(_v<15)setTimeout(_0xvs,200);
-                }
-            };
-            area.appendChild(v);
-            setTimeout(()=>{if(v.parentNode&&_v<15){v.remove();_0xvs();}},1500+Math.random()*1000);
+        function showText(x,y,text){
+            const el=document.createElement('div');
+            el.className='combo-text';
+            el.textContent=text;
+            el.style.left=x+'px';
+            el.style.top=y+'px';
+            document.body.appendChild(el);
+            setTimeout(()=>el.remove(),800);
         }
 
-        function _0xr(emojis){
+        function showBigText(text){
+            const el=document.createElement('div');
+            el.className='emotional-damage';
+            el.innerHTML=text;
+            document.body.appendChild(el);
+            setTimeout(()=>el.remove(),1500);
+        }
+
+        function rain(emojis){
             for(let i=0;i<15;i++){
                 setTimeout(()=>{
                     const e=document.createElement('div');
                     e.className='emoji-rain';
                     e.textContent=emojis[Math.floor(Math.random()*emojis.length)];
                     e.style.left=Math.random()*100+'vw';
-                    e.style.animationDuration=(2+Math.random()*2)+'s';
                     document.body.appendChild(e);
-                    setTimeout(()=>e.remove(),4000);
-                },i*100);
+                    setTimeout(()=>e.remove(),3500);
+                },i*60);
             }
         }
 
-        document.addEventListener('keypress',function(e){
+        window.checkNick=async function(){
+            const input=document.getElementById('nameInput').value.trim().toLowerCase().replace(/\s+/g,'');
+            const err=document.getElementById('nameError');
+            if(!input){err.textContent='❌ Введи ник!';err.classList.remove('hidden');return;}
+
+            if(answers.nick.some(a=>a.replace(/\s+/g,'')===input)){
+                document.getElementById('playerName').textContent='ОЛЕГ БАТЯ 👑';
+                goToStage(1);
+                startSpeedrun();
+                rain(['🎄','❄️','🎅','⭐','👑','🗿']);
+                playSuccess();
+            }else{
+                nickAttempts++;
+                err.textContent=errors.nick[Math.min(nickAttempts-1,4)];
+                err.classList.remove('hidden');
+                shake();playFail();
+                if(nickAttempts>=3)showBigText('💀 КРИНЖ 💀');
+            }
+        };
+
+        window.checkAnswer=function(s){
+            const input=document.getElementById('answer'+s).value.trim().toLowerCase();
+            const err=document.getElementById('error'+s);
+
+            if(answers[s].includes(input)){
+                playSuccess();
+                showText(window.innerWidth/2,window.innerHeight/2,['ГГ!','БАЗА!','КРАСАВА!','ТОПЧИК!','ОРУ!'][Math.floor(Math.random()*5)]);
+
+                if(s===10){
+                    goToStage(11);
+                    document.getElementById('certificateCode').textContent=certData.map((c,i)=>String.fromCharCode(c^certKey.charCodeAt(i%certKey.length))).join('');
+                    document.getElementById('finalTime').textContent=stopSpeedrun();
+                    playWin();
+                    rain(['🎉','🎄','🎁','🏆','🔥','🎅','⭐','🗿','👑']);
+                    setTimeout(()=>rain(['🎉','🎆','🎄','💰']),1000);
+                }else{
+                    // Переход на следующий уровень
+                    goToStage(s + 1);
+                    rain(['✅','⭐','🗿']);
+                }
+            }else{
+                err.textContent=errors[s];
+                err.classList.remove('hidden');
+                shake();playFail();
+                setTimeout(()=>err.classList.add('hidden'),3000);
+            }
+        };
+
+        // ========== МИНИ-ИГРА РЕАКЦИЯ ==========
+        window.startReaction = function(){
+            audioCtx.resume();
+            document.getElementById('startReactionBtn').classList.add('hidden');
+            reactionScore = 0;
+            reactionBest = Infinity;
+            document.getElementById('reactionScore').textContent = '0';
+            document.getElementById('reactionBest').textContent = '---';
+            startReactionRound();
+        };
+
+        function startReactionRound(){
+            const btn = document.getElementById('reactionBtn');
+            const result = document.getElementById('reactionResult');
+
+            btn.className = 'reaction-btn waiting';
+            btn.textContent = 'ЖДИ...';
+            result.textContent = '';
+            reactionState = 'waiting';
+
+            // Случайная задержка 1.5-4 секунды
+            const delay = 1500 + Math.random() * 2500;
+            reactionTimeout = setTimeout(()=>{
+                if(reactionState === 'waiting'){
+                    reactionState = 'ready';
+                    reactionStartTime = Date.now();
+                    btn.className = 'reaction-btn ready';
+                    btn.textContent = 'ЖМАКАЙ!';
+                    beep(800, 0.1, 'sine');
+
+                    // Таймаут на слишком медленную реакцию
+                    reactionTimeout = setTimeout(()=>{
+                        if(reactionState === 'ready'){
+                            reactionState = 'idle';
+                            btn.className = 'reaction-btn waiting';
+                            btn.textContent = 'СЛИШКОМ МЕДЛЕННО!';
+                            result.textContent = '💀 ВРЕМЯ ВЫШЛО! Начинаем заново...';
+                            result.className = 'reaction-result reaction-fail';
+                            reactionScore = 0;
+                            document.getElementById('reactionScore').textContent = '0';
+                            playFail(); shake();
+                            setTimeout(startReactionRound, 2000);
+                        }
+                    }, 1000);
+                }
+            }, delay);
+        }
+
+        window.handleReaction = function(){
+            const btn = document.getElementById('reactionBtn');
+            const result = document.getElementById('reactionResult');
+
+            if(reactionState === 'waiting'){
+                // Нажали слишком рано!
+                clearTimeout(reactionTimeout);
+                reactionState = 'idle';
+                btn.className = 'reaction-btn early';
+                btn.textContent = 'РАНО!';
+                result.textContent = '💀 СЛИВ! Начинаем заново...';
+                result.className = 'reaction-result reaction-fail';
+                reactionScore = 0;
+                document.getElementById('reactionScore').textContent = '0';
+                playFail(); shake();
+                showBigText('💀 СЛИВ 💀');
+                setTimeout(startReactionRound, 2000);
+            }
+            else if(reactionState === 'ready'){
+                // Успех!
+                clearTimeout(reactionTimeout);
+                const reactionTime = Date.now() - reactionStartTime;
+                reactionState = 'idle';
+
+                if(reactionTime < reactionBest){
+                    reactionBest = reactionTime;
+                    document.getElementById('reactionBest').textContent = reactionBest;
+                }
+
+                if(reactionTime < 350){
+                    // Быстрая реакция
+                    reactionScore++;
+                    document.getElementById('reactionScore').textContent = reactionScore;
+                    btn.textContent = reactionTime + ' мс!';
+                    result.textContent = '🔥 БЫСТРО! ' + (3-reactionScore) + ' осталось';
+                    result.className = 'reaction-result reaction-fast';
+                    beep(600, 0.1, 'sine');
+                    showText(window.innerWidth/2, window.innerHeight/2, 'БАЗА!');
+
+                    if(reactionScore >= 3){
+                        // Победа!
+                        result.textContent = '🎉 РЕФЛЕКСЫ НА ВЫСОТЕ!';
+                        playWin();
+                        rain(['⚡','🎯','🔥']);
+                        setTimeout(()=>{ goToStage(5); rain(['✅','⭐']); }, 1500);
+                    }else{
+                        setTimeout(startReactionRound, 1500);
+                    }
+                }else{
+                    // Медленная реакция
+                    btn.textContent = reactionTime + ' мс';
+                    result.textContent = '🐌 Слишком медленно! Нужно < 350мс';
+                    result.className = 'reaction-result reaction-slow';
+                    reactionScore = 0;
+                    document.getElementById('reactionScore').textContent = '0';
+                    playFail();
+                    setTimeout(startReactionRound, 2000);
+                }
+            }
+        };
+
+        // ========== МИНИ-ИГРА ПАМЯТЬ ==========
+        window.startMemory = function(){
+            audioCtx.resume();
+            document.getElementById('startMemoryBtn').classList.add('hidden');
+            memoryRound = 1;
+            document.getElementById('memoryRound').textContent = '1';
+            startMemoryRound();
+        };
+
+        function startMemoryRound(){
+            memoryPlaying = true;
+            memoryShowingSequence = true;
+            memoryInput = [];
+
+            const len = 3 + memoryRound; // 4, 5, 6
+            document.getElementById('sequenceLen').textContent = len;
+
+            // Генерируем случайную последовательность
+            memorySequence = [];
+            for(let i = 0; i < len; i++){
+                memorySequence.push(Math.floor(Math.random() * 5));
+            }
+
+            document.getElementById('memoryResult').textContent = '👀 СМОТРИ И ЗАПОМИНАЙ...';
+            document.getElementById('memoryResult').className = 'reaction-result';
+
+            // Показываем последовательность
+            const btns = document.querySelectorAll('.memory-btn');
+            let i = 0;
+
+            const showNext = ()=>{
+                if(i < memorySequence.length){
+                    const idx = memorySequence[i];
+                    btns[idx].classList.add('flash');
+                    playMemoryTone(idx);
+                    setTimeout(()=>btns[idx].classList.remove('flash'), 350);
+                    i++;
+                    setTimeout(showNext, 600);
+                }else{
+                    memoryShowingSequence = false;
+                    document.getElementById('memoryResult').textContent = '🎮 ТВОЯ ОЧЕРЕДЬ!';
+                }
+            };
+
+            setTimeout(showNext, 1000);
+        }
+
+        // Клик по кнопкам памяти
+        document.querySelectorAll('.memory-btn').forEach(btn=>{
+            btn.addEventListener('click', function(){
+                if(!memoryPlaying || memoryShowingSequence) return;
+
+                const color = parseInt(this.dataset.color);
+                playMemoryTone(color);
+                this.classList.add('flash');
+                setTimeout(()=>this.classList.remove('flash'), 200);
+
+                memoryInput.push(color);
+
+                // Проверяем
+                const idx = memoryInput.length - 1;
+                if(memoryInput[idx] !== memorySequence[idx]){
+                    // Ошибка!
+                    this.classList.add('wrong');
+                    setTimeout(()=>this.classList.remove('wrong'), 500);
+                    document.getElementById('memoryResult').textContent = '💀 НЕПРАВИЛЬНО! Начинаем заново...';
+                    document.getElementById('memoryResult').className = 'reaction-result reaction-fail';
+                    playFail(); shake();
+                    showBigText('💀 СЛИВ 💀');
+                    memoryRound = 1;
+                    document.getElementById('memoryRound').textContent = '1';
+                    setTimeout(startMemoryRound, 2000);
+                    return;
+                }
+
+                this.classList.add('correct');
+                setTimeout(()=>this.classList.remove('correct'), 200);
+
+                if(memoryInput.length === memorySequence.length){
+                    // Раунд пройден!
+                    document.getElementById('memoryResult').textContent = '✅ РАУНД ' + memoryRound + ' ПРОЙДЕН!';
+                    document.getElementById('memoryResult').className = 'reaction-result reaction-fast';
+                    beep(600, 0.1, 'sine');
+                    showText(window.innerWidth/2, window.innerHeight/2, 'БАЗА!');
+
+                    if(memoryRound >= 3){
+                        // Победа!
+                        playWin();
+                        rain(['🧠','💡','🔥']);
+                        setTimeout(()=>{ goToStage(7); rain(['✅','⭐']); }, 1500);
+                    }else{
+                        memoryRound++;
+                        document.getElementById('memoryRound').textContent = memoryRound;
+                        setTimeout(startMemoryRound, 1500);
+                    }
+                }
+            });
+        });
+
+        // ========== ХАРДКОР МИНИ-ИГРА ВИРУСЫ ==========
+        function resetGame(){
+            gameActive=false;
+            virusCount=0;combo=1;wave=1;timeLeft=18;
+            document.getElementById('virusCount').textContent='0';
+            document.getElementById('comboCount').textContent='x1';
+            document.getElementById('waveNum').textContent='1';
+            document.getElementById('gameTimer').textContent='18.0';
+            document.getElementById('gameTimer').parentElement.classList.remove('timer-critical');
+            document.getElementById('progressFill').style.width='0%';
+            document.getElementById('gameArea').innerHTML='';
+            document.getElementById('startGameBtn').classList.remove('hidden');
+            if(gameTimer)clearInterval(gameTimer);
+        }
+
+        window.startGame=function(){
+            if(gameActive)return;
+            gameActive=true;
+            audioCtx.resume();
+            document.getElementById('startGameBtn').classList.add('hidden');
+            virusCount=0;combo=1;wave=1;timeLeft=18;lastKill=Date.now();
+
+            gameTimer=setInterval(()=>{
+                timeLeft-=0.1;
+                document.getElementById('gameTimer').textContent=timeLeft.toFixed(1);
+                if(timeLeft<=5)document.getElementById('gameTimer').parentElement.classList.add('timer-critical');
+                if(timeLeft<=0){
+                    clearInterval(gameTimer);
+                    gameActive=false;
+                    document.getElementById('gameArea').innerHTML='';
+                    showBigText('💀 СЛИВ 💀<br><span style="font-size:0.8rem">КРИВЫЕ РУКИ!</span>');
+                    playGameOver();shake();
+                    setTimeout(resetGame,2000);
+                }
+            },100);
+
+            spawnVirus();
+            setTimeout(spawnVirus,300);
+        };
+
+        function spawnVirus(){
+            if(!gameActive||virusCount>=20)return;
+
+            if(virusCount>=20){
+                clearInterval(gameTimer);
+                gameActive=false;
+                playWin();shake();
+                showBigText('🔥 ПОБЕДА! 🔥');
+                setTimeout(()=>{goToStage(6);rain(['🦠','💀','✅','🛡️','🔥']);},1000);
+                return;
+            }
+
+            const area=document.getElementById('gameArea');
+            const v=document.createElement('div');
+            v.className='click-target';
+
+            const size=40+Math.random()*40;
+            const emojis=['🦠','👾','💀','☠️','🤡','😈','💩','👽','🎃','🤖'];
+            v.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+            v.style.width=size+'px';
+            v.style.height=size+'px';
+            v.style.fontSize=(size*0.6)+'px';
+            v.style.background=`radial-gradient(circle,hsl(${Math.random()*60},100%,50%),hsl(${Math.random()*60+300},100%,30%))`;
+
+            const maxX=area.clientWidth-size,maxY=area.clientHeight-size;
+            v.style.left=Math.random()*maxX+'px';
+            v.style.top=Math.random()*maxY+'px';
+
+            v.onclick=function(){
+                if(!gameActive)return;
+
+                const now=Date.now();
+                if(now-lastKill<600){
+                    combo=Math.min(combo+1,15);
+                    if(combo>=3)playCombo();
+                }else combo=1;
+                lastKill=now;
+
+                document.getElementById('comboCount').textContent='x'+combo;
+                virusCount++;
+                document.getElementById('virusCount').textContent=virusCount;
+                document.getElementById('progressFill').style.width=(virusCount/20*100)+'%';
+
+                if(virusCount===7){wave=2;document.getElementById('waveNum').textContent='2';}
+                if(virusCount===14){wave=3;document.getElementById('waveNum').textContent='3';}
+
+                const r=this.getBoundingClientRect();
+                const texts=['💀','🔥','БАЗА!','ОРУ!','x'+combo];
+                showText(r.left,r.top,texts[Math.floor(Math.random()*texts.length)]);
+                playKill();
+
+                if(virusCount>=20){
+                    this.classList.add('final-virus');
+                    shake();playSuccess();
+                    rain(['💥','🔥','💀','🎉']);
+                    clearInterval(gameTimer);
+                    gameActive=false;
+                    setTimeout(()=>{goToStage(6);rain(['✅','🛡️','🗿']);},800);
+                }else{
+                    this.remove();
+                    const delay=wave===1?200:wave===2?120:80;
+                    setTimeout(spawnVirus,delay);
+                    if(wave>=2&&Math.random()>0.5)setTimeout(spawnVirus,delay+50);
+                    if(wave>=3&&Math.random()>0.6)setTimeout(spawnVirus,delay+100);
+                }
+            };
+
+            area.appendChild(v);
+
+            const disappear=wave===1?1200:wave===2?900:700;
+            setTimeout(()=>{
+                if(v.parentNode&&gameActive&&virusCount<20){
+                    v.remove();
+                    combo=1;
+                    document.getElementById('comboCount').textContent='x1';
+                    spawnVirus();
+                }
+            },disappear);
+        }
+
+        document.addEventListener('keypress',e=>{
             if(e.key==='Enter'){
                 const active=document.querySelector('.stage.active');
                 if(!active)return;
                 const id=active.id;
-                if(id==='stage0')_0xc4f2();
-                else if(id==='stage1')_0xa7e3(1);
-                else if(id==='stage2')_0xa7e3(2);
-                else if(id==='stage3')_0xa7e3(3);
-                else if(id==='stage5')_0xa7e3(5);
-                else if(id==='stage6')_0xa7e3(6);
+                if(id==='stage0')checkNick();
+                else if(id.startsWith('stage')&&!['stage4','stage5','stage6','stage11'].includes(id)){
+                    const n=parseInt(id.replace('stage',''));
+                    if(n>=1&&n<=10)checkAnswer(n);
+                }
             }
         });
 
-        _0xu();
+        updateIndicators();
 
-        // Anti-cheat
-        console.log('%c🔒 СТОП! ВСЕ ОТВЕТЫ ЗАШИФРОВАНЫ SHA-256! 🔒','font-size:20px;color:#ff0000;font-weight:bold;background:#000;padding:10px;');
-        console.log('%c😎 Тут только хеши, бро. Даже ChatGPT не поможет!','font-size:12px;color:#00ff00;');
-        console.log('%c🐺 СИГМА проходит честно! Не будь бетой...','font-size:14px;color:#ff00ff;');
-        console.log('%c🚽 Skibidi dop dop dop yes yes...','font-size:12px;color:#888;');
+        console.log('%c🔒 СТОЙ! ОТВЕТЫ ЗАШИФРОВАНЫ! 🔒','font-size:18px;color:#ff0000;font-weight:bold;');
+        console.log('%c🗿 Легенда проходит честно!','font-size:12px;color:#ff00ff;');
     })();
     </script>
 </body>
