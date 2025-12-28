@@ -231,7 +231,7 @@
 ⠀⠀⠀⠀⠉⠛⠿⠿⠿⠿⠿⠿⠿⠛⠉⠀⠀⠀⠀⠀⠀⠀
                 </div>
                 <p class="message">Зашифровано <span class="ohio">"ШИФРОМ САЛАТА"</span>...</p>
-                <div class="cipher-text">НУЛТХУ</div>
+                <div class="cipher-text">ЯМЕЙУ</div>
                 <p class="message hint">🔍 гугл в помощь...</p>
                 <div class="prompt"><input type="text" id="answer1" placeholder="Расшифровка..."></div>
                 <button onclick="checkAnswer(1)">[ ВЗЛОМАТЬ ]</button>
@@ -320,7 +320,7 @@
 ... ... ... ...\ : : : : : : : : : \: : : : : : : : : _=" : : : : : ',_.: : : : : : : :,-"
 ... ... ... ... \,: : : : : : : : : \: :""'~---~"" : : : : : : : : : : : : = :""~~
                 </div>
-                <p class="message" style="font-size: 0.9rem; color: #ff69b4;">👆 ВОТ ЭТО БАЗА 👆</p>
+                <p class="message" style="font-size: 0.9rem; color: #ff69b4;">👆 ВОТ ЭТО ДА 👆</p>
                 <div class="ascii-art dong-ascii">
 ⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠛⠛⠛⠋⠉⠈⠉⠉⠉⠉⠛⠻⢿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣿⡿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⢿⣿⣿⣿⣿
@@ -505,6 +505,11 @@
         </div>
     </div>
 
+    <!-- ФОНОВАЯ МУЗЫКА -->
+    <audio id="bgMusic" loop>
+        <source src="https://www.myinstants.com/media/sounds/jingle-bells-remixxx.mp3" type="audio/mpeg">
+    </audio>
+
     <!-- БАОБАБ АУДИО -->
     <audio id="baobabAudio" loop>
         <source src="https://www.myinstants.com/media/sounds/baobab.mp3" type="audio/mpeg">
@@ -513,11 +518,11 @@
     <script>
     (function(){
         const answers = {
-            nick: ['olegbatia','oleg batia','oleg_batia','олегбатя','olegbatya','олег батя','олегбатия'],
-            1: ['крипер'],
+            nick: ['olegbatia'],
+            1: ['гринч'],
             2: ['чебурек'],
             4: ['pisos','писос'],
-            5: ['база','основа'],
+            5: ['база'],
             7: ['баобаб'],
             8: ['фиаско'],
             10: ['69']
@@ -629,6 +634,15 @@
             [100,200,300,400,500,600].forEach((f,i)=>setTimeout(()=>beep(f,0.15,'sawtooth'),i*40));
         }
 
+        // Фоновая музыка
+        function startBgMusic(){
+            const bgMusic = document.getElementById('bgMusic');
+            bgMusic.volume = 0.3;
+            bgMusic.play().catch(()=>{
+                console.log('🎵 Фоновая музыка ждёт взаимодействия');
+            });
+        }
+
         // Баобаб только на уровне 7
         window.playBaobab = function(){
             audioCtx.resume();
@@ -729,6 +743,7 @@
 
         window.checkNick=async function(){
             audioCtx.resume();
+            startBgMusic(); // Запуск фоновой музыки
             const input=document.getElementById('nameInput').value.trim().toLowerCase().replace(/\s+/g,'');
             const err=document.getElementById('nameError');
             if(!input){err.textContent='❌ ГДЕ НИК?!';err.classList.remove('hidden');playOof();return;}
