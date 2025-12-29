@@ -6,7 +6,7 @@
     <title>🎄 НОВОГОДНИЙ ВЗЛОМ 🎄</title>
     <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         body { background: #0a0a0a; color: #00ff00; font-family: 'VT323', monospace; min-height: 100vh; overflow-x: hidden; }
         body::before { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; background: repeating-linear-gradient(0deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15) 1px, transparent 1px, transparent 2px); z-index: 1000; }
         @keyframes flicker { 0% { opacity: 0.97; } 50% { opacity: 1; } 100% { opacity: 0.98; } }
@@ -52,10 +52,11 @@
         .meme-text { font-size: 1.8rem; text-transform: uppercase; letter-spacing: 3px; }
         .cipher-text { font-family: 'Press Start 2P', cursive; font-size: 1.1rem; color: #00ffff; background: #000; padding: 15px; margin: 15px 0; border: 2px solid #00ffff; letter-spacing: 3px; }
         .binary-text { font-family: 'VT323', monospace; font-size: 1.5rem; color: #00ff00; background: #000; padding: 15px; margin: 15px 0; border: 2px solid #00ff00; letter-spacing: 2px; }
-        .click-target { position: absolute; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: transform 0.05s; border-radius: 50%; animation: virus-float 0.3s ease-in-out infinite; }
+        .click-target { position: absolute; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: transform 0.05s; border-radius: 50%; animation: virus-float 0.3s ease-in-out infinite; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; pointer-events: auto; touch-action: manipulation; -webkit-touch-callout: none; }
         @keyframes virus-float { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-5px) scale(1.05); } }
         .click-target:hover { transform: scale(1.3) !important; filter: brightness(1.5); }
-        .game-area { position: relative; width: 100%; height: 400px; background: linear-gradient(180deg, #000 0%, #110011 50%, #001100 100%); border: 3px solid #00ff00; margin: 20px 0; overflow: hidden; }
+        .click-target:active { transform: scale(0.9) !important; filter: brightness(2); }
+        .game-area { position: relative; width: 100%; height: 400px; background: linear-gradient(180deg, #000 0%, #110011 50%, #001100 100%); border: 3px solid #00ff00; margin: 20px 0; overflow: hidden; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; }
         .score-display { font-family: 'Press Start 2P', cursive; font-size: 0.8rem; color: #ffff00; margin: 10px 0; }
         .timer-display { font-family: 'Press Start 2P', cursive; font-size: 1.2rem; color: #ff0000; margin: 10px 0; text-shadow: 0 0 10px #ff0000; }
         .timer-critical { animation: timer-blink 0.2s infinite; }
@@ -118,6 +119,7 @@
         .memory-btn.btn-yellow { color: #ffff00; }
         .memory-btn.btn-green { color: #00ff00; }
         .memory-btn.btn-purple { color: #ff00ff; }
+        .memory-btn.btn-orange { color: #ff8800; }
 
         .baobab { color: #8B4513; font-size: 2rem; text-shadow: 0 0 10px #8B4513; }
         .sus { color: #ff0000; font-size: 2rem; text-shadow: 0 0 10px #ff0000; animation: sus-pulse 0.5s infinite; }
@@ -355,11 +357,11 @@
                 <button onclick="startGame()" id="startGameBtn">[ МОЧИТЬ 🔫 ]</button>
             </div>
 
-            <!-- STAGE 7: ИВАН ЗОЛО - БАОБАБ -->
+            <!-- STAGE 7: ВЕЛИКИЙ ИСПОЛНИТЕЛЬ -->
             <div class="stage" id="stage7">
                 <p class="message"><span class="success">✅ ВИРУСЫ УНИЧТОЖЕНЫ!</span></p>
-                <p class="message"><span class="cringe">🎵 УРОВЕНЬ 7: ИВАН ЗОЛО 🎵</span></p>
-                <p class="message" style="font-size: 2rem; color: #8B4513;">🌳🌳🌳 БАОБАБ 🌳🌳🌳</p>
+                <p class="message"><span class="cringe">🎵 УРОВЕНЬ 7: ВЕЛИКИЙ ИСПОЛНИТЕЛЬ 🎵</span></p>
+                <p class="message" style="font-size: 2rem; color: #8B4513;">🌳🌳🌳 ЛЕГЕНДА РУНЕТА 🌳🌳🌳</p>
                 <div class="ascii-art dong-ascii">
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀🌳⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀🌿🌳🌿⠀⠀⠀⠀⠀⠀
@@ -369,7 +371,7 @@
 ⠀⠀⠀⠀⠀⠀⠀⠀║║⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀🎵ТРЕК🎵⠀⠀⠀⠀⠀
                 </div>
-                <p class="message">Легендарный <span class="epic">ИВАН ЗОЛО</span> поёт:</p>
+                <p class="message">Легендарный <span class="epic">великий исполнитель</span> поёт:</p>
                 <p class="message" style="font-size: 1.6rem;"><span class="baobab">"ЭТО ЖЕ БУБЛЬ ГУМ, ИЛИ ЭТО ___?"</span></p>
                 <button onclick="playBaobab()" style="background: #ff0000; margin-bottom: 15px;">🎵 ВКЛЮЧИТЬ ТРЕК 🎵</button>
                 <div class="prompt"><input type="text" id="answer7" placeholder="Это..."></div>
@@ -379,7 +381,7 @@
 
             <!-- STAGE 8: ФИАСКО -->
             <div class="stage" id="stage8">
-                <p class="message"><span class="success">✅ БАОБАБ ОДОБРЯЕТ!</span></p>
+                <p class="message"><span class="success">✅ ПРАВИЛЬНО!</span></p>
                 <p class="message"><span class="cringe">🐕 УРОВЕНЬ 8: ЛЕГЕНДА РУНЕТА 🐕</span></p>
                 <p class="message" style="font-size: 1.5rem; color: #ff69b4;">( ͡° ͜ʖ ͡°) 🐕 СОБАКЕН 🐕 ( ͡° ͜ʖ ͡°)</p>
                 <div class="ascii-art booba-ascii">
@@ -405,19 +407,20 @@
                 <p class="message" style="font-size: 1.5rem; color: #00ffff;">🤖🧠 РОБОТ-МОЗГ 🧠🤖</p>
                 <div class="ascii-art thicc-ascii">
 ⠀⠀⠀⠀⠀⣤⣶⣶⣶⣶⣶⣶⣤⠀⠀⠀⠀⠀
-⠀⠀⠀⣠⣾🔴🔵🟡🟢🟣⣷⣄⠀⠀⠀
+⠀⠀⠀⣠⣾🔴🔵🟡🟢🟣🟠⣷⣄⠀⠀
 ⠀⠀⣴⣿⣿⣿ЗАПОМИНАЙ⣿⣿⣿⣦⠀⠀
 ⠀⠀⣿⣿⣿⣿И⣿ПОВТОРЯЙ⣿⣿⠀⠀
 ⠀⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠀⠀
                 </div>
                 <p class="message">Пройди <span class="epic">3 РАУНДА</span>!</p>
-                <div class="score-display">РАУНД: <span id="memoryRound">1</span>/3 | ДЛИНА: <span id="sequenceLen">5</span></div>
+                <div class="score-display">РАУНД: <span id="memoryRound">1</span>/3 | ДЛИНА: <span id="sequenceLen">6</span></div>
                 <div class="memory-grid" id="memoryGrid">
                     <button class="memory-btn btn-red" data-color="0">🔴</button>
                     <button class="memory-btn btn-blue" data-color="1">🔵</button>
                     <button class="memory-btn btn-yellow" data-color="2">🟡</button>
                     <button class="memory-btn btn-green" data-color="3">🟢</button>
                     <button class="memory-btn btn-purple" data-color="4">🟣</button>
+                    <button class="memory-btn btn-orange" data-color="5">🟠</button>
                 </div>
                 <p class="reaction-result" id="memoryResult"></p>
                 <button onclick="startMemory()" id="startMemoryBtn">[ ПОЕХАЛИ 🧠 ]</button>
@@ -629,7 +632,7 @@
             setTimeout(playTacoBell,2000);
         }
         function playGameOver(){playBruh();setTimeout(()=>beep(30,0.8,'sawtooth'),200);setTimeout(playFart,500);setTimeout(playMetalPipe,700);setTimeout(playSus,900);}
-        function playMemoryTone(n){beep([262,330,392,523,659][n],0.3,'sine');}
+        function playMemoryTone(n){beep([262,330,392,523,659,784][n],0.3,'sine');}
         function playEpic(){
             [100,200,300,400,500,600].forEach((f,i)=>setTimeout(()=>beep(f,0.15,'sawtooth'),i*40));
         }
@@ -646,6 +649,10 @@
         // Баобаб только на уровне 7
         window.playBaobab = function(){
             audioCtx.resume();
+            // Останавливаем фоновую музыку
+            const bgMusic = document.getElementById('bgMusic');
+            bgMusic.pause();
+            // Включаем трек
             const audio = document.getElementById('baobabAudio');
             audio.currentTime = 0;
             audio.play().catch(()=>{
@@ -697,6 +704,11 @@
 
         function goToStage(n){
             stopBaobab(); // Остановить музыку при смене уровня
+            // Возобновляем фоновую музыку, если она была остановлена
+            const bgMusic = document.getElementById('bgMusic');
+            if(bgMusic.paused && stage !== 0){
+                bgMusic.play().catch(()=>{});
+            }
             document.querySelectorAll('.stage').forEach(s=>s.classList.remove('active'));
             document.getElementById('stage'+n).classList.add('active');
             stage=n;
@@ -908,12 +920,12 @@
             memoryShowingSequence = true;
             memoryInput = [];
 
-            const len = 4 + memoryRound;
+            const len = 5 + memoryRound;
             document.getElementById('sequenceLen').textContent = len;
 
             memorySequence = [];
             for(let i = 0; i < len; i++){
-                memorySequence.push(Math.floor(Math.random() * 5));
+                memorySequence.push(Math.floor(Math.random() * 6));
             }
 
             document.getElementById('memoryResult').textContent = '👀 СМОТРИ...';
@@ -927,16 +939,16 @@
                     const idx = memorySequence[i];
                     btns[idx].classList.add('flash');
                     playMemoryTone(idx);
-                    setTimeout(()=>btns[idx].classList.remove('flash'), 350);
+                    setTimeout(()=>btns[idx].classList.remove('flash'), 300);
                     i++;
-                    setTimeout(showNext, 600);
+                    setTimeout(showNext, 500);
                 }else{
                     memoryShowingSequence = false;
                     document.getElementById('memoryResult').textContent = '🎮 ЖМАКАЙ!';
                 }
             };
 
-            setTimeout(showNext, 1000);
+            setTimeout(showNext, 800);
         }
 
         document.querySelectorAll('.memory-btn').forEach(btn=>{
@@ -1045,7 +1057,9 @@
             v.style.left=Math.random()*maxX+'px';
             v.style.top=Math.random()*maxY+'px';
 
-            v.onclick=function(){
+            const handleClick = function(e){
+                e.preventDefault();
+                e.stopPropagation();
                 if(!gameActive)return;
 
                 const now=Date.now();
@@ -1084,6 +1098,9 @@
                     if(wave>=3&&Math.random()>0.5)setTimeout(spawnVirus,delay+60);
                 }
             };
+
+            v.onmousedown = handleClick;
+            v.ontouchstart = handleClick;
 
             area.appendChild(v);
 
